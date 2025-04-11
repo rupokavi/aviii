@@ -28,6 +28,8 @@
       flex: 0 0 280px;
       position: relative;
       margin-top: 15px;
+      overflow: hidden; /* For image zoom effect */
+      border-radius: 5px;
     }
 
     .cert-image img {
@@ -36,6 +38,11 @@
       border: 1px solid #ddd;
       border-radius: 5px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease; /* Smooth zoom-in */
+    }
+
+    .cert-image:hover img {
+      transform: scale(1.08); /* Zoom effect */
     }
 
     .cert-details {
@@ -134,8 +141,8 @@
     <p class="intro">Some valuable certificates that I earned through my consistent hard work and dedication.</p>
 
     <!-- Certificate Blocks with Alternating Layout -->
-    
-    <!-- Block 1 (Left Image) -->
+
+    <!-- Block 1 -->
     <div class="cert-block">
       <div class="cert-image">
         <img src="attachment_certificate.jpg" alt="Industrial Attachment Certificate">
@@ -165,7 +172,7 @@
       </div>
     </div>
 
-    <!-- Block 2 (Right Image) -->
+    <!-- Block 2 -->
     <div class="cert-block">
       <div class="cert-image">
         <img src="ml.jpg" alt="Machine Learning Certificate">
@@ -189,7 +196,7 @@
       </div>
     </div>
 
-    <!-- Block 3 (Left Image) -->
+    <!-- Block 3 -->
     <div class="cert-block">
       <div class="cert-image">
         <img src="supervised.jpg" alt="Supervised Learning Certificate">
@@ -211,7 +218,7 @@
       </div>
     </div>
 
-    <!-- Block 4 (Right Image) -->
+    <!-- Block 4 -->
     <div class="cert-block">
       <div class="cert-image">
         <img src="advanced.jpg" alt="Advanced Algorithms Certificate">
@@ -233,7 +240,7 @@
       </div>
     </div>
 
-    <!-- Block 5 (Left Image) -->
+    <!-- Block 5 -->
     <div class="cert-block">
       <div class="cert-image">
         <img src="python.jpg" alt="Python Certificate">
@@ -254,7 +261,7 @@
       </div>
     </div>
 
-    <!-- Block 6 (Right Image) -->
+    <!-- Block 6 -->
     <div class="cert-block">
       <div class="cert-image">
         <img src="unsupervised.jpg" alt="Unsupervised Learning Certificate">
@@ -274,6 +281,8 @@
         </p>
       </div>
     </div>
+
   </main>
 </body>
 </html>
+
