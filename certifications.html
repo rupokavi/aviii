@@ -6,100 +6,123 @@
   <title>Certifications - Rupok Islam Avi</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Improved Alignment Styles */
+    /* Certification Page Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .cert-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .cert-header h1 {
+      color: #2c3e50;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
     .cert-block {
       display: flex;
       gap: 40px;
-      margin: 40px 0;
+      margin: 50px 0;
       padding: 30px 0;
       border-bottom: 1px solid #eee;
       align-items: flex-start;
     }
 
     .cert-image {
-      flex: 0 0 280px;
-      position: relative;
-      margin-top: 15px;
+      flex: 0 0 300px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .cert-image img {
       width: 100%;
       height: auto;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: block;
     }
 
     .cert-details {
       flex: 1;
-      padding-right: 20px;
+      padding-top: 10px;
     }
 
-    .cert-details h2 {
+    .cert-title {
       color: #2c3e50;
-      font-size: 1.5em;
       margin: 0 0 20px 0;
-      line-height: 1.3;
+      font-size: 1.5em;
     }
 
-    .label {
+    .cert-meta {
+      margin-bottom: 25px;
+    }
+
+    .meta-row {
+      margin: 12px 0;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .meta-label {
       font-weight: 600;
       color: #555;
-      display: inline-block;
-      min-width: 90px;
+      width: 100px;
+      flex-shrink: 0;
     }
 
-    .skills span {
-      display: inline-block;
+    .meta-content {
+      flex: 1;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+    }
+
+    .skill-tag {
       background: #f0f0f0;
-      padding: 6px 14px;
-      margin: 8px 8px 0 0;
+      padding: 6px 15px;
       border-radius: 20px;
       font-size: 0.9em;
-      line-height: 1.4;
     }
 
     .verification {
-      margin: 20px 0 10px;
+      margin-top: 25px;
     }
 
-    .verification a {
+    .cert-link {
       color: #b7472a;
       text-decoration: none;
       font-weight: 600;
       transition: opacity 0.2s;
     }
 
-    .verification a:hover {
+    .cert-link:hover {
       opacity: 0.8;
-    }
-
-    .ref-details {
-      background: #f7f7f7;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 20px;
     }
 
     @media (max-width: 768px) {
       .cert-block {
         flex-direction: column;
         gap: 25px;
-        padding: 25px 0;
       }
       
       .cert-image {
+        width: 100%;
         flex: none;
-        max-width: 100%;
-        margin: 0 auto;
-      }
-      
-      .cert-details {
-        padding-right: 0;
-      }
-      
-      .cert-details h2 {
-        font-size: 1.3em;
       }
     }
   </style>
@@ -122,35 +145,53 @@
   </header>
 
   <main class="container">
-    <h1>Certifications</h1>
-    <p class="intro">Some valuable certificates that I earned through my consistent hard work and dedication.</p>
+    <div class="cert-header">
+      <h1>Professional Certifications</h1>
+      <p>Credentials earned through dedicated learning and practical application</p>
+    </div>
 
-    <!-- Certificate Block 1 -->
+    <!-- Machine Learning Specialization -->
     <div class="cert-block">
       <div class="cert-image">
-        <img src="attachment_certificate.jpg" alt="Industrial Attachment Certificate">
+        <img src="ml-certificate.jpg" alt="Machine Learning Specialization Certificate">
       </div>
       <div class="cert-details">
-        <h2>Industrial Attachment at JTI Bangladesh Tongi Factory</h2>
-        <p><span class="label">Factory:</span> JTI Tongi</p>
-        <p><span class="label">Subject:</span> Industrial Attachment</p>
-        <p><span class="label">Level:</span> Advanced</p>
-        <div class="skills">
-          <span>Industrial Safety & Compliance</span>
-          <span>Equipment Handling</span>
-          <span>Manufacturing Processes</span>
-          <span>Data Analysis</span>
-          <span>Root Cause Analysis</span>
-          <span>Team Collaboration</span>
-          <span>Communication Skills</span>
-          <span>Time Management</span>
+        <h2 class="cert-title">Machine Learning Specialization</h2>
+        <div class="cert-meta">
+          <div class="meta-row">
+            <span class="meta-label">Institution:</span>
+            <span class="meta-content">Stanford University & DeepLearning.AI (via Coursera)</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Subject:</span>
+            <span class="meta-content">Machine Learning</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Level:</span>
+            <span class="meta-content">Intermediate</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Date:</span>
+            <span class="meta-content">May 2, 2024</span>
+          </div>
         </div>
-        <p class="verification">Verification: Certificate</p>
-        <div class="ref-details">
-          <p><strong>Ref.:</strong> JTBL/PAC/FACTORY/2025/12</p>
-          <p><strong>Date:</strong> 23-March-2025</p>
-          <p>To Whom It May Concern,</p>
-          <p>JT International Bangladesh Limited certifies that Mr. Rupok Islam Avi successfully completed an Industrial Training Program.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Supervised Learning</span>
+          <span class="skill-tag">Regression</span>
+          <span class="skill-tag">Classification</span>
+          <span class="skill-tag">Unsupervised Learning</span>
+          <span class="skill-tag">Reinforcement Learning</span>
+          <span class="skill-tag">Neural Networks</span>
+          <span class="skill-tag">Decision Trees</span>
+          <span class="skill-tag">Clustering</span>
+          <span class="skill-tag">Recommender Systems</span>
+        </div>
+        <div class="verification">
+          <a href="https://coursera.org/verify/specialization/ABC123" 
+             class="cert-link"
+             target="_blank">
+            View Verified Certificate
+          </a>
         </div>
       </div>
     </div>
