@@ -5,78 +5,104 @@
   <title>Hobbies - Rupok Islam Avi</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #ffffff;
-      margin: 0;
-      padding: 50px 80px;
-      color: #000;
-      line-height: 1.6;
-    }
-
-    h1 {
-      font-size: 36px;
-      font-weight: 400;
+    /* Navbar/Header Styles */
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 15px;
       margin-bottom: 30px;
     }
 
-    p {
-      margin-bottom: 20px;
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .name-header {
+      font-size: 24px;
+      color: #2c3e50;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .name-header span {
+      font-weight: 400;
+      display: inline-block;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #b7472a;
+    }
+
+    .nav-links a.active {
+      color: #b7472a;
+      font-weight: 600;
+    }
+
+    /* Content Styles */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 36px;
+      margin-bottom: 30px;
     }
 
     strong {
-      font-weight: 700;
+      color: #b7472a;
     }
 
     a {
-      color: #c0392b;
+      color: #b7472a;
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
       text-decoration: underline;
     }
-
-    /* Original Navbar Style */
-    .navbar {
-      background-color: #f0f0f0;
-      padding: 20px 80px;
-    }
-
-    .navbar h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 0 0 10px 0;
-    }
-
-    .navbar ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .navbar ul li {
-      display: inline;
-      margin-right: 15px;
-    }
-
-    .navbar ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    .navbar ul li a.active {
-      color: #c0392b;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="navbar">
-      <h1>Rupok Islam Avi</h1>
-      <ul>
+  <header class="navbar-container">
+    <div class="header-content">
+      <img src="profile.jpg" alt="Site Logo" class="header-logo">
+      <h1 class="name-header">
+        Rupok Islam <span>Avi</span>
+      </h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
         <li><a href="index.html">About</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="research.html">Research</a></li>
@@ -86,10 +112,10 @@
         <li><a href="certifications.html">Certifications</a></li>
         <li><a href="cv.html">CV</a></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <main>
+  <main class="container">
     <h1>Hobbies</h1>
 
     <p><strong>Problem Solving:</strong> I find immense pleasure in honing my problem-solving skills through daily sessions of 
@@ -113,4 +139,3 @@
   </main>
 </body>
 </html>
-
