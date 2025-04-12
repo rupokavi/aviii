@@ -37,7 +37,7 @@ body {
 }
 
 .name-header {
-  font-size: 24px; /* Reduced from 36px */
+  font-size: 20px; /* Reduced from 36px */
   color: #2c3e50;
   margin: 0;
   font-weight: 600; /* This will affect the bold part */
