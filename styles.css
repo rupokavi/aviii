@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar Styles */
+/* Header & Navigation */
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -19,6 +19,20 @@ body {
   border-bottom: 2px solid #eee;
   padding-bottom: 15px;
   margin-bottom: 30px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .name-header {
@@ -52,6 +66,30 @@ body {
   font-weight: 600;
 }
 
+/* Bio Section */
+.bio-section {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.profile-photo {
+  flex: 0 0 260px;
+  text-align: center;
+}
+
+.profile-photo img {
+  width: 200px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
 /* Content Styles */
 .highlight {
   background: #f7f2ed;
@@ -73,20 +111,113 @@ h2 {
   margin: 40px 0 20px;
 }
 
+/* Gallery/Slideshow */
+.Gallery {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#slideshow {
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dots {
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #555;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+  body {
+    padding: 25px;
+  }
+
   .navbar-container {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
   }
 
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .header-logo {
+    width: 50px;
+    height: 50px;
+  }
+
   .bio-section {
     flex-direction: column;
+    gap: 30px;
   }
 
   .profile-photo {
+    flex: none;
     order: -1;
     margin-bottom: 30px;
+  }
+
+  #slideshow {
+    width: 100%;
+    height: 300px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .name-header {
+    font-size: 28px;
+  }
+
+  .header-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-photo img {
+    width: 160px;
+  }
+
+  #slideshow {
+    height: 200px;
+  }
+
+  .contact-info {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 14px;
   }
 }
