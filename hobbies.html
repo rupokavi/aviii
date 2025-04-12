@@ -37,51 +37,46 @@
       text-decoration: underline;
     }
 
-    .navbar-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 80px;
+    /* Original Navbar Style */
+    .navbar {
       background-color: #f0f0f0;
+      padding: 20px 80px;
     }
 
-    .name-header {
+    .navbar h1 {
       font-size: 24px;
       font-weight: bold;
-      color: #333;
+      margin: 0 0 10px 0;
     }
 
-    nav ul.nav-links {
+    .navbar ul {
       list-style-type: none;
       padding: 0;
-      display: flex;
-      gap: 20px;
+      margin: 0;
     }
 
-    .nav-links li a {
+    .navbar ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    .navbar ul li a {
       text-decoration: none;
       color: #333;
       font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 4px;
     }
 
-    .nav-links li a.active {
-      background-color: #c0392b;
-      color: white;
-    }
-
-    .nav-links li a:hover {
-      background-color: #e74c3c;
-      color: white;
+    .navbar ul li a.active {
+      color: #c0392b;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header class="navbar-container">
-    <h1 class="name-header">Rupok Islam Avi</h1>
-    <nav>
-      <ul class="nav-links">
+  <nav>
+    <div class="navbar">
+      <h1>Rupok Islam Avi</h1>
+      <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="research.html">Research</a></li>
@@ -91,8 +86,8 @@
         <li><a href="certifications.html">Certifications</a></li>
         <li><a href="cv.html">CV</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <main>
     <h1>Hobbies</h1>
@@ -118,3 +113,4 @@
   </main>
 </body>
 </html>
+
