@@ -1,112 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hobbies - Rupok Islam Avi</title>
+  <meta charset="UTF-8" />
+  <title>Rupok Islam Avi</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Navbar/Header Styles */
-    .navbar-container {
+    .bio-section {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 15px;
-      margin-bottom: 30px;
+      gap: 40px;
+      margin-top: 30px;
     }
 
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    .profile-photo {
+      flex: 0 0 260px;
+      text-align: center;
     }
 
-    .header-logo {
-      width: 60px;
-      height: 60px;
+    .profile-photo img {
+      width: 200px;
       border-radius: 8px;
-      object-fit: cover;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
     }
 
-    .name-header {
-      font-size: 24px;
-      color: #2c3e50;
-      margin: 0;
-      font-weight: 600;
-    }
-
-    .name-header span {
-      font-weight: 400;
-      display: inline-block;
-    }
-
-    .nav-links {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: #b7472a;
-    }
-
-    .nav-links a.active {
-      color: #b7472a;
-      font-weight: 600;
-    }
-
-    /* Content Styles */
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
+    .contact-info {
+      background: #f7f7f7;
       padding: 20px;
+      border-radius: 8px;
     }
 
- h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-    strong {
-      color: #b7472a;
+    /* Slideshow */
+    .Gallery {
+      text-align: center;
+      margin-top: 50px;
     }
 
-    a {
-      color: #b7472a;
-      text-decoration: none;
-      font-weight: 500;
+    #slideshow {
+      width: 450px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    a:hover {
-      text-decoration: underline;
+    .dots {
+      margin-top: 15px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin: 0 6px;
+      border-radius: 50%;
+      background-color: #ccc;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+      background-color: #555;
     }
   </style>
 </head>
 <body>
- <header class="navbar-container">
+<header class="navbar-container">
  <div class="header-content">
   <img src="profile.jpg" alt="Site Logo" class="header-logo">
-  <h1 >
+  <h1 class="name-header">
     Rupok Islam <span>Avi</span>
   </h1>
 </div>
-    <nav>
+  <nav>
       <ul class="nav-links">
-        <li><a href="index.html">About</a></li>
+        <li><a href="index.html" class="active">About</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="awards.html">Awards</a></li>
         <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="hobbies.html" class="active">Hobbies</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
         <li><a href="certifications.html">Certifications</a></li>
         <li><a href="cv.html">CV</a></li>
       </ul>
