@@ -28,15 +28,15 @@ body {
 }
 
 .header-logo {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .name-header {
-  font-size: 32px; /* Reduced from 36px */
+  font-size: 24px; /* Reduced from 36px */
   color: #2c3e50;
   margin: 0;
   font-weight: 600; /* This will affect the bold part */
