@@ -36,48 +36,85 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 80px;
+      background-color: #f0f0f0;
+    }
+
+    .name-header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav ul.nav-links {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .nav-links li a.active {
+      background-color: #c0392b;
+      color: white;
+    }
+
+    .nav-links li a:hover {
+      background-color: #e74c3c;
+      color: white;
+    }
   </style>
 </head>
 <body>
   <header class="navbar-container">
-    <h1 class="name-header">Professional Name</h1>
+    <h1 class="name-header">Rupok Islam Avi</h1>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">About</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="#">Research</a></li>
-        <li><a href="#">Awards</a></li>
-        <li><a href="#">Teaching</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
         <li><a href="hobbies.html" class="active">Hobbies</a></li>
         <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="#">CV</a></li>
+        <li><a href="cv.html">CV</a></li>
       </ul>
     </nav>
   </header>
-  <h1>Hobbies</h1>
 
-  <p><strong>Problem Solving:</strong> I find immense pleasure in honing my problem-solving skills through daily sessions of 
-    <a href="https://www.lumosity.com" target="_blank">Lumosity</a> brain games. These researcher-designed games challenge and improve my short-term memory, working memory, information processing speed, cognitive function, and fluid reasoning. Additionally, I used to participate in competitive programming contests such as Codeforces, Google Kickstart, and Google HashCode.
-  </p>
+  <main>
+    <h1>Hobbies</h1>
 
-  <p><strong>Online Learning and Continuing Education:</strong> My thirst for knowledge in my research domain drives me to engage in continuous learning. I regularly follow online blogs such as <em>Towards Data Science</em>, <em>Medium</em>, and <em>Kaggle Notebooks</em>, and stay updated with the latest state-of-the-art research on <em>ResearchGate</em>. Additionally, I take courses on platforms like <em>DataCamp</em>, <em>edX</em>, and <em>Coursera</em>. This commitment to ongoing education helps me stay current and competitive with the latest research trends in my field. My online course certificates are showcased on my LinkedIn profile.
-  </p>
+    <p><strong>Problem Solving:</strong> I find immense pleasure in honing my problem-solving skills through daily sessions of 
+      <a href="https://www.lumosity.com" target="_blank">Lumosity</a> brain games. These researcher-designed games challenge and improve my short-term memory, working memory, information processing speed, cognitive function, and fluid reasoning. Additionally, I used to participate in competitive programming contests such as Codeforces, Google Kickstart, and Google HashCode.
+    </p>
 
-  <p><strong>Contribution as a Peer Reviewer:</strong> I actively contribute to the academic community as a referee for esteemed Q1 journals. My commitment to reviewing scholarly work allows me to play a crucial role in maintaining the quality and rigor of research publications. By providing constructive feedback and insightful evaluations, I contribute to the advancement of knowledge within my field. Check out my peer review recognition by Web of Science 
-    <a href="#" target="_blank">here</a>.
-  </p>
+    <p><strong>Online Learning and Continuing Education:</strong> My thirst for knowledge in my research domain drives me to engage in continuous learning. I regularly follow online blogs such as <em>Towards Data Science</em>, <em>Medium</em>, and <em>Kaggle Notebooks</em>, and stay updated with the latest state-of-the-art research on <em>ResearchGate</em>. Additionally, I take courses on platforms like <em>DataCamp</em>, <em>edX</em>, and <em>Coursera</em>. This commitment to ongoing education helps me stay current and competitive with the latest research trends in my field. My online course certificates are showcased on my LinkedIn profile.
+    </p>
 
-  <p><strong>Hackathons:</strong> Participating in ML hackathons and business competitions is an exhilarating experience for me. Collaborating with individuals from diverse cultures and interests, we come together as a team to tackle real-world challenges through innovative machine learning solutions. I actively participate in hackathons hosted on 
-    <a href="https://www.kaggle.com" target="_blank">Kaggle</a>, 
-    <a href="https://www.devpost.com" target="_blank">Devpost</a>, and 
-    <a href="https://www.drivendata.org" target="_blank">DrivenData</a>. All of my business case solutions from my undergraduate years are available on 
-    <a href="https://www.slideshare.net" target="_blank">SlideShare</a>. In April 2024, as the <em>Founder & AI Researcher of SpecX</em>, I submitted our solution for the MIT Solve Challenge 2024. You can find our solution 
-    <a href="#" target="_blank">here</a>.
-  </p>
+    <p><strong>Contribution as a Peer Reviewer:</strong> I actively contribute to the academic community as a referee for esteemed Q1 journals. My commitment to reviewing scholarly work allows me to play a crucial role in maintaining the quality and rigor of research publications. By providing constructive feedback and insightful evaluations, I contribute to the advancement of knowledge within my field. Check out my peer review recognition by Web of Science 
+      <a href="#" target="_blank">here</a>.
+    </p>
 
-  <p><strong>Lead Guitar:</strong> Another passion of mine is playing lead guitar. My musical journey began with acoustic guitar in class 8, and I gradually immersed myself in the enchanting world of <em>progressive rock</em>, <em>heavy metal</em>, and <em>alternative-rock</em> genres. I’ve performed on various college and university stages, showcasing my love for music. Additionally, I used to teach lead guitar to fellow students during my college days, sharing techniques, tips, and my love for the instrument. To express my passion for lead guitar, I have a personal 
-    <a href="https://www.youtube.com" target="_blank">YouTube channel</a>, where I share my guitar covers and musical explorations.
-  </p>
-
+    <p><strong>Hackathons:</strong> Participating in ML hackathons and business competitions is an exhilarating experience for me. Collaborating with individuals from diverse cultures and interests, we come together as a team to tackle real-world challenges through innovative machine learning solutions. I actively participate in hackathons hosted on 
+      <a href="https://www.kaggle.com" target="_blank">Kaggle</a>, 
+      <a href="https://www.devpost.com" target="_blank">Devpost</a>, and 
+      <a href="https://www.drivendata.org" target="_blank">DrivenData</a>. All of my business case solutions from my undergraduate years are available on 
+      <a href="https://www.slideshare.net" target="_blank">SlideShare</a>. In April 2024, as the <em>Founder & AI Researcher of SpecX</em>, I submitted our solution for the MIT Solve Challenge 2024. You can find our solution 
+      <a href="#" target="_blank">here</a>.
+    </p>
+  </main>
 </body>
 </html>
