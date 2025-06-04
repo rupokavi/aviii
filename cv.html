@@ -110,82 +110,49 @@
       color: #555;
     }
 
+    /* PDF download icon */
+    .cv-download {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      text-decoration: none;
+      color: #d9534f;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+
+    .cv-download img {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+    }
+
+    /* Partition line */
+    .divider {
+      border-top: 2px solid #ccc;
+      margin: 40px 0;
+    }
+
     .cv-section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 30px;
-      background: #f7f7f7;
-      border-radius: 8px;
+      margin: 40px;
     }
 
     .cv-section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
     }
 
     .cv-section p {
-      margin: 8px 0;
       font-size: 16px;
+      color: #444;
+      line-height: 1.6;
     }
-
-    .cv-section .label {
-      font-weight: bold;
-    }
-
-    .cv-section .tag {
-      display: inline-block;
-      padding: 4px 10px;
-      font-size: 13px;
-      background-color: #e63946;
-      color: white;
-      border-radius: 4px;
-      margin-right: 6px;
-    }
-
-    .cv-section .link-button {
-      display: inline-block;
-      margin: 6px 8px 6px 0;
-      padding: 4px 10px;
-      border: 1px solid #333;
-      text-decoration: none;
-      font-size: 14px;
-      border-radius: 4px;
-      color: #000;
-    }
-
-    .cv-section .university {
-      display: flex;
-      align-items: center;
-      margin-top: 8px;
-    }
-
-    .cv-section .university img {
-      width: 18px;
-      margin-right: 6px;
-    }
-
-    .cv-divider {
-      border: 0;
-      height: 1px;
-      background: #ccc;
-      margin: 30px 0;
-    }
-
-    .cv-pdf-preview {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .cv-pdf-preview iframe {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #aaa;
-      border-radius: 6px;
-    }
-
   </style>
 </head>
 <body>
+
   <header class="navbar-container">
     <div class="header-content">
       <img src="profile.jpg" alt="Site Logo" class="header-logo">
@@ -207,47 +174,32 @@
     </nav>
   </header>
 
+  <!-- PDF Download Icon -->
+  <a href="your-cv.pdf" target="_blank" class="cv-download">
+    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon" />
+    <span>PDF</span>
+  </a>
+
   <main>
-    <!-- CV SECTION START -->
     <section class="cv-section">
-      <h2>Curriculum Vitae</h2>
-
-      <p><span class="label">Full Name:</span> Rupok Islam Avi</p>
-      <p><span class="label">Email:</span> rupokavi2652[at]gmail.com</p>
-      <p><span class="label">Pronouns:</span> he/him</p>
-      <p><span class="label">Links:</span>
-        <a class="link-button" href="#">LinkedIn</a>
-        <a class="link-button" href="#">Google Scholar</a>
-        <a class="link-button" href="#">GitHub</a>
-        <a class="link-button" href="#">ResearchGate</a>
-        <a class="link-button" href="#">Personal Website</a>
-      </p>
-
-      <hr class="cv-divider">
-
-      <h3>Education</h3>
-      <p><span class="tag">2021 - 2025</span><br>
-        <strong>B.Sc. in Industrial & Production Engineering</strong><br>
-        <span class="university">
-          <img src="https://img.icons8.com/ios-glyphs/30/graduation-cap.png" alt="cap">
-          Rajshahi University of Engineering & Technology (RUET)
-        </span><br>
-        Department of Industrial & Production Engineering<br>
-        • CGPA: 3.85/4.00 (Top 5%)<br>
-        • Dean’s Award (3×) for CGPA above 3.75<br>
-        • Undergraduate thesis on supply chain disruption modeling
-      </p>
-
-      <div class="cv-pdf-preview">
-        <h3>CV PDF Preview</h3>
-        <iframe src="your-cv-file.pdf" type="application/pdf"></iframe>
-        <p style="margin-top: 10px;">
-          <a class="link-button" href="your-cv-file.pdf" target="_blank">Open Full CV</a>
-        </p>
-      </div>
+      <h2>General</h2>
+      <p><strong>Full Name:</strong> Rupok Islam Avi</p>
+      <p><strong>Email:</strong> rupokavi@email.com</p>
+      <p><strong>Pronouns:</strong> he/him</p>
     </section>
-    <!-- CV SECTION END -->
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <p><strong>B.Sc. in Industrial & Production Engineering</strong></p>
+      <p>Rajshahi University of Engineering & Technology (RUET)</p>
+      <p>CGPA: 3.90 / 4.00</p>
+      <p>2020 – Present</p>
+    </section>
   </main>
+
 </body>
 </html>
 
