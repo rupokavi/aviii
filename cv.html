@@ -163,6 +163,26 @@
       width: 18px;
       margin-right: 6px;
     }
+
+    .cv-divider {
+      border: 0;
+      height: 1px;
+      background: #ccc;
+      margin: 30px 0;
+    }
+
+    .cv-pdf-preview {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .cv-pdf-preview iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+    }
+
   </style>
 </head>
 <body>
@@ -203,6 +223,8 @@
         <a class="link-button" href="#">Personal Website</a>
       </p>
 
+      <hr class="cv-divider">
+
       <h3>Education</h3>
       <p><span class="tag">2021 - 2025</span><br>
         <strong>B.Sc. in Industrial & Production Engineering</strong><br>
@@ -215,13 +237,18 @@
         • Dean’s Award (3×) for CGPA above 3.75<br>
         • Undergraduate thesis on supply chain disruption modeling
       </p>
+
+      <div class="cv-pdf-preview">
+        <h3>CV PDF Preview</h3>
+        <iframe src="your-cv-file.pdf" type="application/pdf"></iframe>
+        <p style="margin-top: 10px;">
+          <a class="link-button" href="your-cv-file.pdf" target="_blank">Open Full CV</a>
+        </p>
+      </div>
     </section>
     <!-- CV SECTION END -->
   </main>
 </body>
 </html>
 
-
-</body>
-</html>
 
