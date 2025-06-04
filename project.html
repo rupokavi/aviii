@@ -2,113 +2,253 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rupok Islam Avi</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rupok Islam Avi - Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    .bio-section {
+    :root {
+      --primary-color: #4361ee;
+      --secondary-color: #3f37c9;
+      --accent-color: #4cc9f0;
+      --light-bg: #f8f9fa;
+      --dark-text: #2b2d42;
+      --light-text: #8d99ae;
+      --white: #ffffff;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
+      background-color: var(--light-bg);
+    }
+    
+    /* Navigation */
+    .navbar-container {
+      background-color: var(--white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-content {
       display: flex;
-      gap: 40px;
-      margin-top: 30px;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-
-    .profile-photo {
-      flex: 0 0 260px;
-      text-align: center;
-    }
-
-    .profile-photo img {
-      width: 200px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .contact-info {
-      background: #f7f7f7;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    /* Slideshow */
-    .Gallery {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    #slideshow {
-      width: 450px;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .dots {
-      margin-top: 15px;
-    }
-
-    .dot {
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      margin: 0 6px;
+    
+    .header-logo {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background-color: #ccc;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      object-fit: cover;
+      margin-right: 1rem;
     }
-
-    .dot.active {
-      background-color: #555;
+    
+    .name-header {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark-text);
     }
-    .travel-section {
-  margin-top: 60px;
-}
-
-.travel-section h2 {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.travel-list {
-  list-style: disc inside;
-  margin-bottom: 30px;
-  padding-left: 0;
-  line-height: 1.8;
-}
-
-.travel-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.travel-gallery div {
-  flex: 1 1 200px;
-  text-align: center;
-  max-width: 220px;
-}
-
-.travel-gallery img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.travel-gallery img:hover {
-  transform: scale(1.05);
-}
-
-.travel-gallery p {
-  margin-top: 8px;
-  font-weight: 500;
-  color: #555;
-}
-
+    
+    .name-header span {
+      color: var(--primary-color);
+    }
+    
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      border-top: 1px solid #eee;
+    }
+    
+    .nav-links li {
+      padding: 1rem 0;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-text);
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      transition: var(--transition);
+      border-radius: 4px;
+    }
+    
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--white);
+      background-color: var(--primary-color);
+    }
+    
+    /* Projects Section */
+    .projects-container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .page-header h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .page-header p {
+      color: var(--light-text);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .project-content {
+      padding: 1.5rem;
+    }
+    
+    .project-content h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--secondary-color);
+    }
+    
+    .project-content p {
+      color: var(--light-text);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background-color: var(--primary-color);
+      color: var(--white);
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    
+    .project-links a:hover {
+      background-color: var(--secondary-color);
+    }
+    
+    .project-links i {
+      margin-right: 0.5rem;
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .tech-tag {
+      background-color: #e9ecef;
+      color: var(--dark-text);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--white);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .social-links a {
+      color: var(--light-text);
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      color: var(--primary-color);
+    }
+    
+    .copyright {
+      color: var(--light-text);
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .nav-links {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+      }
+      
+      .nav-links li {
+        flex-shrink: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -125,60 +265,101 @@
         <li><a href="publications.html">Publications</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="awards.html">Awards</a></li>
-        <li><a href="project.html"class="active">Project</a></li>
-        <li><a href="hobbies.html" >Hobbies</a></li>
+        <li><a href="project.html" class="active">Project</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
         <li><a href="certifications.html">Certifications</a></li>
         <li><a href="cv.html">CV</a></li>
       </ul>
     </nav>
   </header>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <header class="bg-white shadow-md sticky top-0 z-10">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">My Projects</h1>
-      <nav>
-        <a href="/" class="text-gray-600 hover:text-blue-600">Home</a>
-      </nav>
+  <main class="projects-container">
+    <div class="page-header">
+      <h1>My Projects</h1>
+      <p>Explore my technical projects showcasing my skills in machine learning, healthcare technology, and innovative solutions.</p>
     </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Project Card -->
-      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-        <img src="DiabetesPrediction.jpeg" alt="Project 1" class="w-full h-48 object-cover rounded-t-2xl">
-        <div class="p-6">
-          <h2 class="text-xl font-semibold mb-2">Diabetes Prediction Using ML</h2>
-          <p class="text-gray-600 text-sm">I've built a Diabetes prediction model using data on key health indicators like Pregnancies, Glucose level, Blood Pressure, Skin Thickness, Insulin level, BMI, Diabetes Pedigree function, and Age. With a solid accuracy rate ,this project showcases the potential of machine learning in healthcare. 
-Furthermore, I've developed a user-friendly web application on my localhost for real-time predictions.
-Check out the code on GitHub to see how it works and feel free to contribute or share your thoughts! </p>
-          <a href="https://github.com/rupokavi/DiabetesPrediction" class="inline-block mt-4 text-blue-500 hover:underline">View on GitHub</a>
+    
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="DiabetesPrediction.jpeg" alt="Diabetes Prediction" class="project-image">
+        <div class="project-content">
+          <h2>Diabetes Prediction Using ML</h2>
+          <p>Developed a predictive model analyzing key health indicators (glucose levels, BMI, age, etc.) with high accuracy. Created a local web app for real-time predictions, demonstrating ML's potential in healthcare diagnostics.</p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Pandas</span>
+          </div>
+          
+          <div class="project-meta">
+            <div class="project-links">
+              <a href="https://github.com/rupokavi/DiabetesPrediction" target="_blank">
+                <i class="fas fa-code"></i> View Code
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Duplicate this card for more projects -->
-      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-        <img src="project2.png" alt="Project 2" class="w-full h-48 object-cover rounded-t-2xl">
-        <div class="p-6">
-          <h2 class="text-xl font-semibold mb-2">Smart Wheelchair System</h2>
-          <p class="text-gray-600 text-sm">An ergonomic wheelchair with a built-in defecation system, manual brakes, and reclining support.</p>
-          <a href="https://github.com/yourusername/project2" class="inline-block mt-4 text-blue-500 hover:underline">View on GitHub</a>
+      
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="project2.png" alt="Smart Wheelchair" class="project-image">
+        <div class="project-content">
+          <h2>Smart Wheelchair System</h2>
+          <p>An ergonomic wheelchair with integrated defecation system, manual brakes, and reclining support designed to improve quality of life for patients with limited mobility.</p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Product Design</span>
+            <span class="tech-tag">Ergonomics</span>
+            <span class="tech-tag">Healthcare</span>
+          </div>
+          
+          <div class="project-meta">
+            <div class="project-links">
+              <a href="https://github.com/yourusername/project2" target="_blank">
+                <i class="fas fa-code"></i> View Details
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Add more project cards as needed -->
-
+      
+      <!-- Project 3 - Example placeholder -->
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Data Analysis" class="project-image">
+        <div class="project-content">
+          <h2>Healthcare Data Analysis</h2>
+          <p>Comprehensive analysis of patient data to identify trends and improve treatment outcomes using advanced statistical methods and visualization techniques.</p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Tableau</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+          
+          <div class="project-meta">
+            <div class="project-links">
+              <a href="#" target="_blank">
+                <i class="fas fa-code"></i> Coming Soon
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
-  <footer class="bg-white border-t mt-12">
-    <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-      &copy; 2025 Your Name. All rights reserved.
+  <footer>
+    <div class="social-links">
+      <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
     </div>
+    <p class="copyright">&copy; 2025 Rupok Islam Avi. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
-
