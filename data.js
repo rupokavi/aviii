@@ -23,15 +23,6 @@ const DATA_PERSONAL = {
 // To REMOVE one: delete its block.
 // Fields: title, authors (array), venue, year, paperLink (or "" if none), image, abstract
 const DATA_PUBLICATIONS = [
-    {
-    title:    "Industry 4.0-Enabled Sustainable Supply Chain Strategies: Insights from the Emerging Garments Industry Using a Bayesian Best-Worst Method",
-    authors:  ["Mushfiquddin Rafid*", "Rupok Islam Avi*", "Rejwanul Haque Wasi"],
-    venue:    "Supply Chain Insider Journal",
-    year:     2025,
-    paperLink:"https://zenodo.org/records/17284382",
-    image:    "Supplychain_insider.png",
-    abstract: "Industry 4.0 (I4.0) technologies are diffusing quickly in making export oriented garment supply chains, particularly in developing economies such as Bangladesh and India. The latest technologies of IoT, robotics, cloud, AI-driven analytics and blockchain are set to introduce more effective operations, supply chain optimization, and sustainability. But adoption is spotty as infrastructure gaps, financial limitations and a shortage of skills have been issues. This research fills the gap in systematically prioritizing the adoption criteria of I4.0 based on three core dimensions, including: Technological Readiness, Supply chain and Sustainability, using Bayesian Best-Worst Method (BWM). The analysis demonstrates that the most important drivers of performance have been: "Technology Readiness to Smart Integration," at the company level; "Supply Chain Efficiency to Real-Time Visibility," at the sector level, and "Sustainability-Driven Digital Compliance" at the industry level. These findings emphasize the need to build technological infrastructure and automate the processes to be able to support digital operations in clothing manufacturing. The paper can be of great benefit to decision-makers in terms of prioritizing on technology investments depending on the unique needs of the ready-made garments industry; hence, enhancing competitiveness and sustainability. The study provides sound, uncertainty-sensitive ordering through the application of the BWM, and contributes to the maturity of the methodology of digital transformation of global garment supply chains.",
-  },
 
   {
     title:    "Harnessing Big Data and AI for Supply Chain Resilience in the Garments Industry",
