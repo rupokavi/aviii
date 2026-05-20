@@ -5,205 +5,80 @@
   <title>Rupok Islam Avi - Projects</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Existing styles from your CV page */
-    .bio-section {
-      display: flex;
-      gap: 40px;
-      margin-top: 30px;
-    }
-
-    .profile-photo {
-      flex: 0 0 260px;
-      text-align: center;
-    }
-
-    .profile-photo img {
-      width: 200px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .contact-info {
-      background: #f7f7f7;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    /* New Projects Section Styles */
-    .projects-section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 30px;
-      background: #f7f7f7;
-      border-radius: 8px;
-    }
-
-    .projects-section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .project-card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .project-card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 15px;
-    }
-
-    .project-card p {
-      margin: 8px 0;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .project-tech {
-      margin: 15px 0;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 4px 10px;
-      font-size: 13px;
-      background-color: #e63946;
-      color: white;
-      border-radius: 4px;
-      margin-right: 6px;
-      margin-bottom: 6px;
-    }
-
-    .link-button {
-      display: inline-block;
-      margin: 6px 8px 6px 0;
-      padding: 4px 10px;
-      border: 1px solid #333;
-      text-decoration: none;
-      font-size: 14px;
-      border-radius: 4px;
-      color: #000;
-    }
-
-    .link-button:hover {
-      background-color: #f0f0f0;
-    }
-
-    .section-divider {
-      border: 0;
-      height: 1px;
-      background: #ccc;
-      margin: 30px 0;
-    }
-
-    /* Responsive adjustments */
+    .projects-section { max-width: 900px; margin: 60px auto; padding: 30px; background: #f7f7f7; border-radius: 8px; }
+    .projects-section h2 { font-size: 28px; margin-bottom: 20px; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 30px; margin-top: 30px; }
+    .project-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .project-card h3 { font-size: 20px; margin-bottom: 10px; color: #333; }
+    .project-image { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; }
+    .project-card p { margin: 8px 0; font-size: 16px; line-height: 1.6; }
+    .project-tech { margin: 15px 0; }
+    .tag { display: inline-block; padding: 4px 10px; font-size: 13px; background-color: #e63946; color: white; border-radius: 4px; margin-right: 6px; margin-bottom: 6px; }
+    .link-button { display: inline-block; margin: 6px 8px 6px 0; padding: 4px 10px; border: 1px solid #333; text-decoration: none; font-size: 14px; border-radius: 4px; color: #000; }
+    .link-button:hover { background-color: #f0f0f0; }
+    .section-divider { border: 0; height: 1px; background: #ccc; margin: 30px 0; }
     @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .projects-section {
-        padding: 20px;
-        margin: 40px auto;
-      }
+      .projects-grid { grid-template-columns: 1fr; }
+      .projects-section { padding: 20px; margin: 40px auto; }
     }
   </style>
 </head>
 <body>
-  <header class="navbar-container">
-    <div class="header-content">
-      <img src="profile.jpg" alt="Site Logo" class="header-logo">
-      <h1 class="name-header">
-        Rupok Islam <span>Avi</span>
-      </h1>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">About</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="awards.html">Awards</a></li>
-        <li><a href="project.html" class="active">Projects</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="cv.html">CV</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="projects-section">
-      <h2>My Projects</h2>
-      <p>Here are some of my notable projects showcasing my technical skills and problem-solving abilities.</p>
-      
-      <hr class="section-divider">
-      
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <img src="DiabetesPrediction.jpeg" alt="Diabetes Prediction" class="project-image">
-          <h3>Diabetes Prediction Using ML</h3>
-          <p>Developed a predictive model analyzing key health indicators (glucose levels, BMI, age, etc.) with high accuracy. Created a local web app for real-time predictions, demonstrating ML's potential in healthcare diagnostics.</p>
-          
-          <div class="project-tech">
-            <span class="tag">Python</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">Flask</span>
-            <span class="tag">Pandas</span>
-          </div>
-          
-          <a href="https://github.com/rupokavi/DiabetesPrediction" class="link-button" target="_blank">View on GitHub</a>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="project-card">
-          <img src="wheelchair.jpg" alt="Smart Wheelchair" class="project-image">
-          <h3>Smart Wheelchair System</h3>
-          <p>An ergonomic wheelchair with integrated defecation system, manual brakes, and reclining support designed to improve quality of life for patients with limited mobility.</p>
-          
-          <div class="project-tech">
-            <span class="tag">Product Design</span>
-            <span class="tag">Ergonomics</span>
-            <span class="tag">Healthcare</span>
-          </div>
-          
-          <a href="https://github.com/yourusername/project2" class="link-button" target="_blank">View Details</a>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Data Analysis" class="project-image">
-          <h3>Healthcare Data Analysis</h3>
-          <p>Comprehensive analysis of patient data to identify trends and improve treatment outcomes using advanced statistical methods and visualization techniques.</p>
-          
-          <div class="project-tech">
-            <span class="tag">Python</span>
-            <span class="tag">Tableau</span>
-            <span class="tag">SQL</span>
-          </div>
-          
-          <a href="#" class="link-button" target="_blank">Coming Soon</a>
-        </div>
-      </div>
-    </section>
-  </main>
+<header class="navbar-container">
+  <div class="header-content">
+    <img src="profile.jpg" alt="Site Logo" class="header-logo">
+    <h1 class="name-header">Rupok Islam <span>Avi</span></h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="awards.html">Awards</a></li>
+      <li><a href="project.html" class="active">Projects</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="projects-section">
+    <h2>My Projects</h2>
+    <p>Here are some of my notable projects showcasing my technical skills and problem-solving abilities.</p>
+    <hr class="section-divider">
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script>
+  const grid = document.getElementById("projects-grid");
+
+  DATA_PROJECTS.forEach(proj => {
+    const card = document.createElement("div");
+    card.className = "project-card";
+
+    const tagsHTML = proj.tags
+      .map(t => `<span class="tag">${t}</span>`)
+      .join("");
+
+    const linkHTML = proj.githubLink
+      ? `<a href="${proj.githubLink}" class="link-button" target="_blank">View on GitHub</a>`
+      : `<span style="color:#999;font-size:13px;font-style:italic">Coming soon</span>`;
+
+    card.innerHTML = `
+      <img src="${proj.image}" alt="${proj.title}" class="project-image">
+      <h3>${proj.title}</h3>
+      <p>${proj.description}</p>
+      <div class="project-tech">${tagsHTML}</div>
+      ${linkHTML}
+    `;
+
+    grid.appendChild(card);
+  });
+</script>
 </body>
 </html>

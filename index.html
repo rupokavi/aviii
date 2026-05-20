@@ -5,154 +5,105 @@
   <title>Rupok Islam Avi</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .bio-section {
-      display: flex;
-      gap: 40px;
-      margin-top: 30px;
-    }
-
-    .profile-photo {
-      flex: 0 0 260px;
-      text-align: center;
-    }
-
-    .profile-photo img {
-      width: 200px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .contact-info {
-      background: #f7f7f7;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    /* Slideshow */
-    .Gallery {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    #slideshow {
-      width: 450px;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .dots {
-      margin-top: 15px;
-    }
-
-    .dot {
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      margin: 0 6px;
-      border-radius: 50%;
-      background-color: #ccc;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .dot.active {
-      background-color: #555;
-    }
+    .bio-section { display: flex; gap: 40px; margin-top: 30px; }
+    .profile-photo { flex: 0 0 260px; text-align: center; }
+    .profile-photo img { width: 200px; border-radius: 8px; margin-bottom: 15px; }
+    .contact-info { background: #f7f7f7; padding: 20px; border-radius: 8px; }
+    .Gallery { text-align: center; margin-top: 50px; }
+    #slideshow { width: 450px; height: 350px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .dots { margin-top: 15px; }
+    .dot { display: inline-block; width: 14px; height: 14px; margin: 0 6px; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease; }
+    .dot.active { background-color: #555; }
   </style>
 </head>
 <body>
+
 <header class="navbar-container">
- <div class="header-content">
-  <img src="profile.jpg" alt="Site Logo" class="header-logo">
-  <h1 class="name-header">
-    Rupok Islam <span>Avi</span>
-  </h1>
-</div>
+  <div class="header-content">
+    <img src="profile.jpg" alt="Site Logo" class="header-logo">
+    <h1 class="name-header">Rupok Islam <span>Avi</span></h1>
+  </div>
   <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">About</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="awards.html">Awards</a></li>
-        <li><a href="project.html">Project</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="cv.html">CV</a></li>
-      </ul>
-    </nav>
-  </header>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="awards.html">Awards</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main class="container">
-    <div class="bio-section">
-      <div class="main-content">
-        <h1 >Rupok Islam Avi</h1>
-        <p>IPE Undergrad Student, RUET | Research Enthusiast | Operations Research |  Optimization | Mathematical Modeling </p>
-        <p>This is <em>Rupok Islam Avi</em>; however, you can call me <strong>Avi</strong>.</p>
-        <p>I am an undergraduate student of <strong>Industrial & Production Engineering</strong> at the<br>
-        <span class="highlight">Department of IPE, Rajshahi University of Engineering & Technology (RUET), Rajshahi</span>.</p>
-        <p>My research focuses on:</p>
-        <ul>
-          <li>Risk management</li>
-          <li>Operations research</li>
-          <li>Machine learning</li>
-          <li>Healthcare supply chain optimization</li>
-        </ul>
-      </div>
-
-      <div class="profile-photo">
-        <img src="profile.jpg" alt="Rupok Islam Avi">
-        <div class="contact-info">
-          <h3>Contact</h3>
-          <p>rupokislamavi.ruet@gmail.com</p>
-          <h3>Address</h3>
-          <p>Pallabi, Mirpur-12<br>
-          Dhaka-1216, Bangladesh</p>
-        </div>
+<main class="container">
+  <div class="bio-section">
+    <div class="main-content">
+      <h1 id="hero-name"></h1>
+      <p id="hero-title"></p>
+      <p id="hero-bio"></p>
+      <p>My research focuses on:</p>
+      <ul id="research-focus"></ul>
+    </div>
+    <div class="profile-photo">
+      <img src="profile.jpg" alt="Rupok Islam Avi">
+      <div class="contact-info">
+        <h3>Contact</h3>
+        <p id="contact-email"></p>
+        <h3>Address</h3>
+        <p id="contact-address"></p>
       </div>
     </div>
+  </div>
 
-    <!-- Slideshow Section -->
-    <div class="Gallery">
-      <img id="slideshow" src="cox.jpg" alt="Slideshow Image">
-      <div class="dots">
-        <span class="dot active" onclick="showSlide(0)"></span>
-        <span class="dot" onclick="showSlide(1)"></span>
-      </div>
-    </div>
-    <h2 >Technical Skills </h2>
-    <p>Proficient in <strong>Operations Research (OR)</strong including stochastic programming, linear/nonlinear programming (LP, QP, MIP, MILP, MINLP), integer programming, game theory, scheduling, and computational complexity analysis, with tool expertise in <strong>Gurobi</strong>. Skilled in <strong>Python</strong> (Pandas, NumPy, Matplotlib, SciPy, TensorFlow, PyTorch, Keras), alongside <strong>C/C++</strong>. Experienced in data science workflows: statistical modeling, data mining, visualization (Tableau, PowerBI), database management. <strong>Advanced machine learning</strong> expertise in regression, clustering (SVM, Random Forest), ensemble methods, recommendation systems.. Proficient with tools like <strong>Git, Jupyter, PyCharm, and big-data systems</strong>. Additional competencies include  <strong>Microsoft Office Suite, and soft skills in leadership, critical thinking, communication</strong>.</p>
-  </main>
+  <div class="Gallery">
+    <img id="slideshow" src="" alt="Slideshow Image">
+    <div class="dots" id="dots"></div>
+  </div>
 
-  <script>
-    const images = ["cox.jpg", "football.jpg"];
-    let currentIndex = 0;
-    const slideshow = document.getElementById("slideshow");
-    const dots = document.querySelectorAll(".dot");
+  <h2>Technical Skills</h2>
+  <p id="skills-text"></p>
+</main>
 
-    function showSlide(index) {
-      currentIndex = index;
-      slideshow.src = images[index];
-      updateDots();
-    }
+<script src="data.js"></script>
+<script>
+  // Fill personal info
+  document.getElementById("hero-name").textContent   = DATA_PERSONAL.name;
+  document.getElementById("hero-title").textContent  = DATA_PERSONAL.title;
+  document.getElementById("hero-bio").innerHTML      = DATA_PERSONAL.bio;
+  document.getElementById("contact-email").textContent  = DATA_PERSONAL.email;
+  document.getElementById("contact-address").innerHTML  = DATA_PERSONAL.address;
+  document.getElementById("skills-text").innerHTML   = DATA_PERSONAL.skills;
 
-    function updateDots() {
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentIndex);
-      });
-    }
+  // Research focus list
+  const focusList = document.getElementById("research-focus");
+  DATA_PERSONAL.researchFocus.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    focusList.appendChild(li);
+  });
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showSlide(currentIndex);
-    }
+  // Slideshow
+  const images  = DATA_PERSONAL.slideshowImages;
+  const slideEl = document.getElementById("slideshow");
+  const dotsEl  = document.getElementById("dots");
+  let currentIndex = 0;
 
-    setInterval(nextSlide, 5000); // 3 seconds
-  </script>
+  slideEl.src = images[0];
+  images.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.className = "dot" + (i === 0 ? " active" : "");
+    dot.onclick = () => showSlide(i);
+    dotsEl.appendChild(dot);
+  });
+
+  function showSlide(index) {
+    currentIndex = index;
+    slideEl.src  = images[index];
+    document.querySelectorAll(".dot").forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+  setInterval(() => showSlide((currentIndex + 1) % images.length), 5000);
+</script>
 </body>
 </html>
-
-  </main>
-</body>
-</html> 
