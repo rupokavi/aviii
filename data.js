@@ -41,7 +41,7 @@ const DATA_PUBLICATIONS = [
     year:     2024,
     paperLink:"https://ieomsociety.org/proceedings/bangladesh2024/228.pdf",
     image:    "bigdata.jpg",
-    abstract: "The Readymade Garments Industry of Bangladesh contributes about 80% of the export earnings and is currently positioned 2nd worldwide in exporting clothes. This study introduces strategies to improve supply chain resilience in Bangladesh's Garments using AI and Big Data tools, comparing developments with China benchmark practices including AI-based quality control cameras, BigQuery analytics, blockchain platforms, and AI-generated digital patterns.",
+    abstract: "The Readymade Garments Industry of Bangladesh contributes about 80% of the export earnings and is currently positioned 2nd worldwide in exporting clothes. The industry faces challenges such as supply chain disruptions, quality control issues, and sustainability concerns. This study introduces strategies to improve supply chain resilience in Bangladesh's Garments Industry using AI and Big Data tools, comparing developments with China as a benchmark. Case studies include HLA Group, Alibaba, H&M, and Zara. Findings show China's adoption of AI-based quality control cameras, BigQuery analytics, blockchain platforms, and AI-generated digital patterns for textiles, while Bangladesh has applied computer vision for quality inspections and predictive analytics for supply chain planning. The paper provides actionable insights for Bangladeshi manufacturers to adopt these technologies for improved competitiveness.",
   },
 
   {
