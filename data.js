@@ -25,6 +25,16 @@ const DATA_PERSONAL = {
 const DATA_PUBLICATIONS = [
 
   {
+    title:    "Industry 4.0-Enabled Sustainable Supply Chain Strategies: Insights from the Emerging Garments Industry Using a Bayesian Best-Worst Method",
+    authors:  ["Mushfiquddin Rafid*", "Rupok Islam Avi*", "Rejwanul Haque Wasi"],
+    venue:    "Supply Chain Insider Journal",
+    year:     2025,
+    paperLink:"https://zenodo.org/records/17284382",
+    image:    "Supplychain_insider.png",
+    abstract: "Industry 4.0 (I4.0) technologies are diffusing quickly in making export oriented garment supply chains...",
+  },
+
+  {
     title:    "Harnessing Big Data and AI for Supply Chain Resilience in the Garments Industry",
     authors:  ["Mushfiquddin Rafid", "Rupok Islam Avi", "Tunazzina Binta Mostafa", "Rejwanul Haque Wasi"],
     venue:    "7th Bangladeshi International Conference on Industrial Engineering and Operations Management, Dec 2024",
