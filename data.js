@@ -26,7 +26,7 @@ const DATA_PUBLICATIONS = [
   {
   title:    "Performance Optimization of AISI 304 Stainless Steel Turning through Hybrid XGBoost–NSGA-II under Dry and MQL Conditions",
   authors:  ["Md Limonur Rahman Lingkon", "Emonur Rahman Fahim", "Rupok Islam Avi"],
-  venue:    "",
+  venue:    "Under Review in Results in Materials",
   year:     2026,
   paperLink:"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5889156",
   image:    "machining.jpg",
