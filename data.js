@@ -23,7 +23,25 @@ const DATA_PERSONAL = {
 // To REMOVE one: delete its block.
 // Fields: title, authors (array), venue, year, paperLink (or "" if none), image, abstract
 const DATA_PUBLICATIONS = [
+  {
+  title:    "Performance Optimization of AISI 304 Stainless Steel Turning through Hybrid XGBoost–NSGA-II under Dry and MQL Conditions",
+  authors:  ["Md Limonur Rahman Lingkon", "Emonur Rahman Fahim", "Rupok Islam Avi"],
+  venue:    "",
+  year:     2026,
+  paperLink:"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5889156",
+  image:    "",
+  abstract: "This study investigates the machining of AISI 304 stainless steel under dry and minimum quantity lubrication (MQL) conditions using castor oil as an eco-friendly cutting fluid. Turning experiments were conducted according to a Taguchi L16 orthogonal array with spindle speed, feed rate, and depth of cut as control factors, while five responses—cutting force (FR), chip reduction coefficient (CRC), temperature (T), sound level (SL), and surface roughness (Ra)—were evaluated. Statistical analyses using Taguchi S/N ratio and ANOVA identified spindle speed and feed rate as dominant machining parameters. Regression models were integrated into a hybrid XGBoost–NSGA-II optimization framework to obtain optimal multi-objective solutions. The results showed that MQL significantly enhanced machinability compared to dry cutting, reducing FR from 0.26 to 0.24 kN, T from 35 °C to 29 °C, SL from 76 to 63 dB, and Ra from 2.62–2.97 µm to 2.10–2.34 µm. These findings confirm that castor-oil-based MQL provides superior process performance and sustainable machining outcomes.",
+},
 
+ {
+    title:    "Hazard Classification and Risk Prioritization in Heavy Manufacturing Industries Using Natural Language Processing and MCDM Method",
+    authors:  ["Rupok Islam Avi", "Emonur Rahman Fahim", "Md Atiur Rahman", "Shantonu Nonda", "Md Sanowar Hossain"],
+    venue:    "Under Review in Discover Artificial Intelligence",
+    year:     2026,
+    paperLink:"https://assets-eu.researchsquare.com/files/rs-9123162/v1_covered_fb160365-df36-47f8-8118-af5c422839b6.pdf?c=1775639619",
+    image:    "nlp.jpg",
+    abstract: "Heavy manufacturing industries are associated with different types of interacting hazards. Conventional hazard identification and prioritization approaches are largely manual, subjective, and difficult to scale. This study proposes an integrated decision support framework that combines Natural Language Processing (NLP)-enabled hazard classification with a Full Consistency Method (FUCOM)–Risk Priority Number (RPN)-based MCDM approach for systematic workplace risk prioritization. Through an extensive literature review, a total of 25 hazards were identified and categorized into five groups: physical, chemical, ergonomic, psychosocial, and environment/workplace hazards. Eight NLP-based classification models were evaluated, including lexical similarity methods, Bidirectional Encoder Representations from Transformers (BERT)-based embeddings, and Sentence Transformer architectures. Findings indicate that Sentence Transformer models paired with Cosine, Euclidean, and Minkowski distance metrics achieved 100% precision, recall, and F1-score, whereas BERT with cosine similarity and Natural Language Toolkit (NLTK) with Jaccard similarity yielded only 28% accuracy, with 0% recall for psychosocial and environment/workplace hazards. For risk prioritization, FUCOM was applied based on the judgments of 20 industry experts, leading to the highest weight for chemical hazards (0.284), followed by environment/workplace (0.243) and physical hazards (0.242). RPN analysis identified stress (0.087), toxic gas release (0.065), and fume exposure (0.053) as the most critical individual risks. The integrated FUCOM-RPN ranking further confirmed toxic gas release, fume exposure, and electrocution as the highest-priority hazards. Sensitivity analysis with 1–15% weight variation demonstrated stable rankings for both top- and bottom-ranked hazards, confirming model robustness. The proposed framework offers an effective data-driven method for occupational hazard management that is quantitative, scalable, and reliable for heavy manufacturing industries.",
+          },  
   {
     title:    "Industry 4.0-Enabled Sustainable Supply Chain Strategies: Insights from the Emerging Garments Industry Using a Bayesian Best-Worst Method",
     authors:  ["Mushfiquddin Rafid*", "Rupok Islam Avi*", "Rejwanul Haque Wasi"],
