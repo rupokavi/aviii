@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Awards - Rupok Islam Avi</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .awards-intro {
+      margin-bottom: 40px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* Year heading */
+    .year-heading {
+      font-size: 26px;
+      font-weight: 700;
+      color: #222;
+      margin: 50px 0 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eee;
+    }
+
+    /* Award card */
+    .award-entry {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: flex-start;
+    }
+
+    .award-images {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 0 0 200px;
+    }
+
+    .award-images img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .award-content {
+      flex: 1;
+    }
+
+    .award-date {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+
+    .award-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .award-desc {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.75;
+      text-align: justify;
+      margin-bottom: 14px;
+    }
+
+    /* Read more toggle */
+    .award-desc.collapsed {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .read-more-btn {
+      background: none;
+      border: none;
+      color: #b7472a;
+      cursor: pointer;
+      font-size: 13px;
+      padding: 0;
+      font-weight: 600;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    /* Links row */
+    .award-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .award-link {
+      display: inline-block;
+      padding: 4px 12px;
+      border: 1px solid #999;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #333;
+      text-decoration: none;
+      background: #f9f9f9;
+      transition: all 0.2s ease;
+    }
+
+    .award-link:hover {
+      background: #eee;
+      border-color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .award-entry {
+        flex-direction: column;
+      }
+      .award-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: unset;
+        width: 100%;
+      }
+      .award-images img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar-container">
+  <div class="header-content">
+    <img src="profile.jpg" alt="Site Logo" class="header-logo">
+    <h1 class="name-header">Rupok Islam <span>Avi</span></h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="awards.html" class="active">Awards</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Awards</h1>
+  <p class="awards-intro">
+    Noteworthy honors and awards received in reversed chronological order.
+  </p>
+
+  <div id="awards-container"></div>
+</main>
+
+<script>
+const awards = [
+
+  {
+    year: 2024,
+    month: "December",
+    title: "1st Place — Supply Chain & Logistics Competition | IEOM Society International",
+    images: ["ieom_award.jpg"],
+    description: "Achieved 1st place in the Supply Chain and Logistics Competition organized by the IEOM Society International at the 7th Bangladeshi International Conference on Industrial Engineering and Operations Management, held in December 2024. The competition was participated by teams from various universities across Bangladesh, focusing on innovative supply chain solutions and optimization strategies. Our team presented a comprehensive analysis of supply chain resilience strategies for the Bangladeshi garments industry using AI and Big Data tools, which was recognized for its novelty, depth of research, and practical applicability.",
+    links: [
+      { label: "Conference", url: "https://ieomsociety.org/bangladesh2024/" },
+    ],
+  },
+
+  {
+    year: 2024,
+    month: "December",
+    title: "Champion — Industrial Premier League Season 4 (Cricket Tournament) | RUET IPE",
+    images: ["chini_babas.jpg"],
+    description: "Represented the 'Chini Babas' team and clinched the championship title in the Industrial Premier League Season 4, a cricket tournament organized by the Department of Industrial and Production Engineering at RUET. The tournament brought together all year groups of the department, fostering team spirit, leadership, and sportsmanship. Our team demonstrated exceptional coordination and strategic thinking throughout the tournament, winning all our matches to claim the championship title in December 2024.",
+    links: [],
+  },
+
+  {
+    year: 2024,
+    month: "October",
+    title: "Dean's Award — Rajshahi University of Engineering & Technology (RUET)",
+    images: ["deans_award.jpg"],
+    description: "Awarded the Dean's Award in recognition of achieving an outstanding CGPA of 3.87 out of 4.00, placing in the top 5% of the class at the Department of Industrial and Production Engineering, Rajshahi University of Engineering & Technology (RUET). This merit-based award is presented to students who maintain exceptional academic performance throughout their undergraduate studies. The award reflects consistent dedication to academic excellence across all semesters.",
+    links: [],
+  },
+
+  {
+    year: 2025,
+    month: "May",
+    title: "Champion — Industrial Super League Season 1 (Football Tournament) | RUET IPE",
+    images: ["meow_lovers.jpg"],
+    description: "Proudly represented the 'Meow Lovers' team and clinched the championship title in the Industrial Super League Season 1, a football tournament organized by the Department of Industrial and Production Engineering at RUET in 2025. The tournament showcased excellent teamwork, resilience, and competitive spirit among the participants. Our team won the title after a series of closely contested matches, demonstrating strong collaboration and determination throughout the season.",
+    links: [],
+  },
+
+];
+
+// Sort by year descending, then render
+const grouped = {};
+awards.forEach(a => {
+  const key = a.year;
+  if (!grouped[key]) grouped[key] = [];
+  grouped[key].push(a);
+});
+
+const container = document.getElementById("awards-container");
+
+Object.keys(grouped).sort((a, b) => b - a).forEach(year => {
+  const yearDiv = document.createElement("div");
+  yearDiv.innerHTML = `<div class="year-heading">${year}</div>`;
+  container.appendChild(yearDiv);
+
+  grouped[year].forEach((award, idx) => {
+    const entry = document.createElement("div");
+    entry.className = "award-entry";
+
+    // Images
+    const imagesHTML = award.images.map(img =>
+      `<img src="${img}" alt="${award.title}" onerror="this.src='https://via.placeholder.com/200x140?text=Award+Photo'">`
+    ).join("");
+
+    // Links
+    const linksHTML = award.links.length
+      ? award.links.map(l => `<a href="${l.url}" class="award-link" target="_blank">${l.label}</a>`).join("")
+      : "";
+
+    const uid = `award-${year}-${idx}`;
+
+    entry.innerHTML = `
+      <div class="award-images">${imagesHTML}</div>
+      <div class="award-content">
+        <div class="award-date">${year} - ${award.month}</div>
+        <div class="award-title">${award.title}</div>
+        <div class="award-desc collapsed" id="desc-${uid}">${award.description}</div>
+        <button class="read-more-btn" id="btn-${uid}" onclick="toggleDesc('${uid}')">Read more</button>
+        ${linksHTML ? `<div class="award-links">${linksHTML}</div>` : ""}
+      </div>
+    `;
+
+    container.appendChild(entry);
+  });
+});
+
+function toggleDesc(uid) {
+  const desc = document.getElementById("desc-" + uid);
+  const btn  = document.getElementById("btn-" + uid);
+  if (desc.classList.contains("collapsed")) {
+    desc.classList.remove("collapsed");
+    btn.textContent = "Read less";
+  } else {
+    desc.classList.add("collapsed");
+    btn.textContent = "Read more";
+  }
+}
+</script>
+
+</body>
+</html>
