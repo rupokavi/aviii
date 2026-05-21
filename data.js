@@ -29,7 +29,7 @@ const DATA_PUBLICATIONS = [
   venue:    "Under Review in Results in Materials",
   year:     2026,
   paperLink:"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5889156",
-  image:    "machining.jpg",
+  image:    "maching.jpg",
   abstract: "This study investigates the machining of AISI 304 stainless steel under dry and minimum quantity lubrication (MQL) conditions using castor oil as an eco-friendly cutting fluid. Turning experiments were conducted according to a Taguchi L16 orthogonal array with spindle speed, feed rate, and depth of cut as control factors, while five responses—cutting force (FR), chip reduction coefficient (CRC), temperature (T), sound level (SL), and surface roughness (Ra)—were evaluated. Statistical analyses using Taguchi S/N ratio and ANOVA identified spindle speed and feed rate as dominant machining parameters. Regression models were integrated into a hybrid XGBoost–NSGA-II optimization framework to obtain optimal multi-objective solutions. The results showed that MQL significantly enhanced machinability compared to dry cutting, reducing FR from 0.26 to 0.24 kN, T from 35 °C to 29 °C, SL from 76 to 63 dB, and Ra from 2.62–2.97 µm to 2.10–2.34 µm. These findings confirm that castor-oil-based MQL provides superior process performance and sustainable machining outcomes.",
 },
 
