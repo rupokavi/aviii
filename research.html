@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Research - Rupok Islam Avi</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    h1 { margin-bottom: 8px; }
+
+    .research-intro {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+
+    /* ── Section heading ── */
+    .section-heading {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin: 52px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+
+    /* ── Ongoing Research cards ── */
+    .research-card {
+      background: #f9f9f9;
+      border-left: 4px solid #b7472a;
+      border-radius: 6px;
+      padding: 22px 26px;
+      margin-bottom: 22px;
+    }
+
+    .research-card h3 {
+      font-size: 18px;
+      color: #2c3e50;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .research-card .meta {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+
+    .research-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.75;
+      text-align: justify;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    .badge-ongoing  { background: #fff3cd; color: #856404; }
+    .badge-review   { background: #d1ecf1; color: #0c5460; }
+    .badge-completed{ background: #d4edda; color: #155724; }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      background: #eee;
+      color: #444;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+
+    /* ── Research Interests grid ── */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .interest-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px 22px;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .interest-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .interest-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .interest-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    .interest-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      position: relative;
+      margin-top: 16px;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ddd;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #b7472a;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #b7472a;
+    }
+
+    .timeline-date {
+      font-size: 12px;
+      color: #b7472a;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .timeline-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 4px;
+    }
+
+    .timeline-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    /* ── Collaborators ── */
+    .collab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .collab-card {
+      background: #f9f9f9;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    .collab-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #b7472a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 auto 12px;
+    }
+
+    .collab-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 4px;
+    }
+
+    .collab-role {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    .collab-type {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 2px 10px;
+      background: #f0e6e3;
+      color: #b7472a;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* ── Tools & Methods ── */
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .tool-chip {
+      padding: 7px 16px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      font-size: 13px;
+      color: #444;
+      background: #fff;
+      transition: all 0.2s ease;
+    }
+
+    .tool-chip:hover {
+      background: #b7472a;
+      color: #fff;
+      border-color: #b7472a;
+    }
+
+    @media (max-width: 768px) {
+      .interests-grid { grid-template-columns: 1fr; }
+      .collab-grid    { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar-container">
+  <div class="header-content">
+    <img src="profile.jpg" alt="Site Logo" class="header-logo">
+    <h1 class="name-header">Rupok Islam <span>Avi</span></h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="awards.html">Awards</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+
+  <h1>Research</h1>
+  <p class="research-intro">
+    My research sits at the intersection of <strong>Operations Research</strong>, <strong>Machine Learning</strong>,
+    and <strong>Industrial Engineering</strong>. I focus on building mathematical models and computational
+    methods that solve real-world scheduling, supply chain, and hazard classification problems —
+    with an emphasis on both theoretical rigor and practical applicability.
+  </p>
+
+  <!-- ══ ONGOING RESEARCH ══ -->
+  <div class="section-heading">Ongoing Research</div>
+
+  <div class="research-card">
+    <span class="badge badge-ongoing">● Ongoing — Thesis</span>
+    <h3>Multi-Objective University Course Scheduling Using Flexible Job Shop Problem (FJSP) Formulation</h3>
+    <div class="meta">
+      Undergraduate Thesis · Department of IPE, RUET · Supervisor: Khairun Nahar
+    </div>
+    <p>
+      This thesis models the university course scheduling problem for the IPE department at RUET as a
+      <strong>Flexible Job Shop Problem (FJSP)</strong> — a well-known NP-hard combinatorial optimization problem.
+      The scheduling problem involves assigning courses to faculty members, rooms, and time slots while
+      satisfying hard constraints (no conflicts, room capacity, faculty availability) and optimizing
+      multiple soft objectives simultaneously.
+    </p>
+    <p>
+      Two solution approaches are implemented and benchmarked: (1) <strong>NSGA-II</strong> (Non-dominated Sorting
+      Genetic Algorithm II) — a population-based metaheuristic for generating Pareto-optimal solutions,
+      and (2) <strong>Gurobi MIP</strong> — an exact solver providing provably optimal benchmarks for small-scale
+      instances. The work includes scalability studies, idle gap constraint modeling, and a
+      FastAPI + Chart.js web application for real-time schedule generation with Excel output.
+    </p>
+    <div>
+      <span class="tag">NSGA-II</span>
+      <span class="tag">Gurobi MIP</span>
+      <span class="tag">Python</span>
+      <span class="tag">Scheduling Theory</span>
+      <span class="tag">Multi-objective Optimization</span>
+      <span class="tag">FastAPI</span>
+    </div>
+  </div>
+
+  <div class="research-card">
+    <span class="badge badge-review">● Under Review — Journal Manuscript</span>
+    <h3>NLP-Based Occupational Hazard Classification in Manufacturing Using Sentence Transformers, BERT, FUCOM, and RPN</h3>
+    <div class="meta">
+      Submitted to <em>Discover Artificial Intelligence</em> (Springer Nature) · May 2026
+    </div>
+    <p>
+      This manuscript applies <strong>Natural Language Processing (NLP)</strong> techniques to classify
+      occupational hazards in manufacturing environments. Sentence Transformers and BERT-based models
+      are used to semantically embed and categorize hazard descriptions from unstructured text data.
+      The <strong>Full Consistency Method (FUCOM)</strong> is applied for multi-criteria weighting of
+      hazard dimensions, while <strong>Risk Priority Numbers (RPN)</strong> from FMEA are used to
+      quantify and rank hazard severity.
+    </p>
+    <p>
+      The integrated NLP-FUCOM-RPN framework enables automated, scalable hazard identification —
+      reducing reliance on manual expert assessment and improving occupational safety decision-making
+      in manufacturing plants.
+    </p>
+    <div>
+      <span class="tag">NLP</span>
+      <span class="tag">Sentence Transformers</span>
+      <span class="tag">BERT</span>
+      <span class="tag">FUCOM</span>
+      <span class="tag">RPN / FMEA</span>
+      <span class="tag">Occupational Safety</span>
+    </div>
+  </div>
+
+  <!-- ══ RESEARCH INTERESTS ══ -->
+  <div class="section-heading">Research Interests</div>
+
+  <div class="interests-grid">
+
+    <div class="interest-card">
+      <div class="interest-icon">📐</div>
+      <h4>Operations Research & Optimization</h4>
+      <p>Linear, nonlinear, and integer programming (LP, MIP, MILP, MINLP), stochastic programming, game theory, and scheduling theory. Tools include Gurobi, CPLEX, and custom Python solvers.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">🤖</div>
+      <h4>Machine Learning & Deep Learning</h4>
+      <p>Supervised and unsupervised learning, ensemble methods (SVM, Random Forest), neural networks, and reinforcement learning. Applied to healthcare, manufacturing, and supply chain domains.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">🔤</div>
+      <h4>Natural Language Processing</h4>
+      <p>Text classification, semantic similarity, and information extraction using transformer-based models (BERT, Sentence Transformers). Applied to hazard classification and document analysis.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">🏭</div>
+      <h4>Supply Chain Optimization</h4>
+      <p>Inventory management, demand forecasting, EOQ modeling, and resilience strategies. Focus on pharmaceutical and garments supply chains in developing economies like Bangladesh.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">📅</div>
+      <h4>Scheduling Theory</h4>
+      <p>Combinatorial scheduling problems modeled as Job Shop, Flexible Job Shop, and Flow Shop Problems. Multi-objective formulations solved via exact (MIP) and metaheuristic (NSGA-II, GA) methods.</p>
+    </div>
+
+    <div class="interest-card">
+      <div class="interest-icon">⚠️</div>
+      <h4>Risk Management & Safety</h4>
+      <p>Occupational hazard identification, FMEA, RPN-based risk prioritization, and ergonomic risk assessment using RULA, REBA, and OWAS methods in industrial environments.</p>
+    </div>
+
+  </div>
+
+  <!-- ══ RESEARCH TIMELINE ══ -->
+  <div class="section-heading">Research Journey</div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">May 2026</div>
+      <div class="timeline-title">NLP/FUCOM Manuscript — Revision Submitted to Discover Artificial Intelligence (Springer Nature)</div>
+      <div class="timeline-desc">Completed full revision addressing reviewer comments, fixed reference list, and resubmitted to Springer Nature journal.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Early 2026</div>
+      <div class="timeline-title">Thesis Pre-Defense — FJSP Course Scheduling</div>
+      <div class="timeline-desc">Presented multi-objective course scheduling thesis using NSGA-II and Gurobi MIP. Defended FJSP framing and scalability analysis before the thesis committee.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2025</div>
+      <div class="timeline-title">Web Application for Course Scheduling</div>
+      <div class="timeline-desc">Built a FastAPI + Chart.js web app for real-time NSGA-II schedule generation with Excel output for the IPE department at RUET.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Dec 2024</div>
+      <div class="timeline-title">4 Papers Presented at IEOM & ICMIME Conferences</div>
+      <div class="timeline-desc">Presented research on Big Data/AI in supply chains, EOQ-based pharmaceutical inventory, ergonomic MSD reduction, and innovative wheelchair-bed design.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024</div>
+      <div class="timeline-title">1st Place — IEOM Supply Chain & Logistics Competition</div>
+      <div class="timeline-desc">Won first place at the IEOM Supply Chain and Logistics Competition among university teams across Bangladesh.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2023 — 2024</div>
+      <div class="timeline-title">Undergraduate Thesis Research Begins</div>
+      <div class="timeline-desc">Started research on bi-objective optimization for pharmaceutical distribution and FJSP-based course scheduling at RUET IPE.</div>
+    </div>
+
+  </div>
+
+  <!-- ══ COLLABORATORS ══ -->
+  <div class="section-heading">Collaborators</div>
+
+  <div class="collab-grid">
+
+    <div class="collab-card">
+      <div class="collab-avatar">KN</div>
+      <div class="collab-name">Khairun Nahar</div>
+      <div class="collab-role">Thesis Supervisor<br>Department of IPE, RUET</div>
+      <span class="collab-type">Supervisor</span>
+    </div>
+
+    <div class="collab-card">
+      <div class="collab-avatar">MA</div>
+      <div class="collab-name">Dr. Md. Asadujjaman</div>
+      <div class="collab-role">Department Head<br>Department of IPE, RUET</div>
+      <span class="collab-type">Department Head</span>
+    </div>
+
+    <div class="collab-card">
+      <div class="collab-avatar">FA</div>
+      <div class="collab-name">Md. Ferdaous Al-Farabi</div>
+      <div class="collab-role">Co-author — Thesis & NLP Manuscript<br>RUET IPE</div>
+      <span class="collab-type">Co-author</span>
+    </div>
+
+    <div class="collab-card">
+      <div class="collab-avatar">MR</div>
+      <div class="collab-name">Mushfiquddin Rafid</div>
+      <div class="collab-role">Co-author — Supply Chain Research<br>RUET IPE</div>
+      <span class="collab-type">Co-author</span>
+    </div>
+
+    <div class="collab-card">
+      <div class="collab-avatar">RW</div>
+      <div class="collab-name">Rejwanul Haque Wasi</div>
+      <div class="collab-role">Co-author — Industry 4.0 & Supply Chain<br>RUET IPE</div>
+      <span class="collab-type">Co-author</span>
+    </div>
+
+    <div class="collab-card">
+      <div class="collab-avatar">SH</div>
+      <div class="collab-name">Dr. Md. Sanowar Hossain</div>
+      <div class="collab-role">Co-author — Pharmaceutical Study<br>RUET IPE</div>
+      <span class="collab-type">Co-author</span>
+    </div>
+
+  </div>
+
+  <!-- ══ TOOLS & METHODS ══ -->
+  <div class="section-heading">Tools & Methods</div>
+  <div class="tools-grid">
+    <span class="tool-chip">Python</span>
+    <span class="tool-chip">Gurobi</span>
+    <span class="tool-chip">NSGA-II</span>
+    <span class="tool-chip">BERT</span>
+    <span class="tool-chip">Sentence Transformers</span>
+    <span class="tool-chip">TensorFlow</span>
+    <span class="tool-chip">PyTorch</span>
+    <span class="tool-chip">Scikit-learn</span>
+    <span class="tool-chip">Pandas / NumPy</span>
+    <span class="tool-chip">FUCOM</span>
+    <span class="tool-chip">FMEA / RPN</span>
+    <span class="tool-chip">RULA / REBA / OWAS</span>
+    <span class="tool-chip">CATIA</span>
+    <span class="tool-chip">Monte Carlo Simulation</span>
+    <span class="tool-chip">EOQ Modeling</span>
+    <span class="tool-chip">Linear Regression</span>
+    <span class="tool-chip">FastAPI</span>
+    <span class="tool-chip">Tableau</span>
+    <span class="tool-chip">Jupyter Notebook</span>
+    <span class="tool-chip">Google Colab</span>
+    <span class="tool-chip">LaTeX</span>
+    <span class="tool-chip">Git</span>
+  </div>
+
+</main>
+</body>
+</html>
