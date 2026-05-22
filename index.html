@@ -2,18 +2,416 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rupok Islam Avi</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    .bio-section { display: flex; gap: 40px; margin-top: 30px; }
-    .profile-photo { flex: 0 0 260px; text-align: center; }
-    .profile-photo img { width: 200px; border-radius: 8px; margin-bottom: 15px; }
-    .contact-info { background: #f7f7f7; padding: 20px; border-radius: 8px; }
-    .Gallery { text-align: center; margin-top: 50px; }
-    #slideshow { width: 450px; height: 350px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .dots { margin-top: 15px; }
-    .dot { display: inline-block; width: 14px; height: 14px; margin: 0 6px; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s ease; }
-    .dot.active { background-color: #555; }
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      margin-bottom: 56px;
+      padding-top: 16px;
+    }
+
+    .hero-left { flex: 1; }
+
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #b7472a;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e0e0e0;
+      max-width: 80px;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 5vw, 62px);
+      font-weight: 400;
+      line-height: 1.08;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: #b7472a;
+    }
+
+    .hero-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: #888;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .hero-bio {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.85;
+      margin-bottom: 28px;
+      text-align: justify;
+    }
+
+    .hero-bio strong { color: #1a1a2e; }
+    .hero-bio .highlight {
+      background: linear-gradient(120deg, #fde8e3 0%, #fde8e3 100%);
+      padding: 1px 4px;
+      border-radius: 3px;
+      color: #b7472a;
+      font-weight: 500;
+    }
+
+    /* CTA buttons */
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .btn-primary {
+      padding: 10px 24px;
+      background: #b7472a;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover { background: #9a3820; transform: translateY(-1px); }
+
+    .btn-secondary {
+      padding: 10px 24px;
+      background: transparent;
+      color: #b7472a;
+      border: 1.5px solid #b7472a;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover { background: #b7472a; color: #fff; transform: translateY(-1px); }
+
+    /* Stats row */
+    .stats-row {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding: 20px 24px;
+      background: #fafafa;
+      border-radius: 10px;
+      border: 1px solid #f0f0f0;
+    }
+
+    .stat { text-align: center; }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #b7472a;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Profile sidebar */
+    .hero-right {
+      flex: 0 0 240px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .profile-img-wrap {
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    .profile-img-wrap img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+      display: block;
+    }
+
+    .profile-card {
+      background: #1a1a2e;
+      border-radius: 0 0 12px 12px;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .profile-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .profile-card-uni {
+      font-size: 11px;
+      color: #b7472a;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .profile-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .profile-info-icon {
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .profile-info-text {
+      font-size: 12px;
+      color: #bbb;
+      line-height: 1.5;
+    }
+
+    .profile-info-text a {
+      color: #e8a090;
+      text-decoration: none;
+    }
+
+    .cgpa-badge {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 14px;
+      background: rgba(183,71,42,0.2);
+      border: 1px solid rgba(183,71,42,0.4);
+      border-radius: 20px;
+      font-size: 12px;
+      color: #e8a090;
+      font-weight: 600;
+    }
+
+    /* ── Section ── */
+    .about-section { margin-bottom: 52px; }
+
+    .about-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #1a1a2e;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .about-section-title span {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #b7472a;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* Research Interests */
+    .interests-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .interest-pill {
+      padding: 8px 18px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1.5px solid;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+
+    .interest-pill:nth-child(1) { color: #b7472a; border-color: #b7472a; background: #fff5f3; }
+    .interest-pill:nth-child(2) { color: #1a6b3c; border-color: #1a6b3c; background: #f0faf4; }
+    .interest-pill:nth-child(3) { color: #1a4a8a; border-color: #1a4a8a; background: #f0f5ff; }
+    .interest-pill:nth-child(4) { color: #6b3a1a; border-color: #6b3a1a; background: #fdf5f0; }
+    .interest-pill:nth-child(5) { color: #6b1a6b; border-color: #6b1a6b; background: #fdf0fd; }
+    .interest-pill:nth-child(6) { color: #1a6b6b; border-color: #1a6b6b; background: #f0fdfd; }
+    .interest-pill:nth-child(7) { color: #8a6b1a; border-color: #8a6b1a; background: #fdfaf0; }
+    .interest-pill:nth-child(8) { color: #3a1a6b; border-color: #3a1a6b; background: #f5f0fd; }
+    .interest-pill:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-group {
+      background: #fafafa;
+      border: 1px solid #f0f0f0;
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+
+    .skill-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #b7472a;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-tag {
+      padding: 3px 10px;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Education */
+    .edu-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid #f5f5f5;
+    }
+
+    .edu-item:last-child { border-bottom: none; }
+
+    .edu-year {
+      flex: 0 0 80px;
+      font-size: 12px;
+      color: #b7472a;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding-top: 2px;
+    }
+
+    .edu-content h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+
+    .edu-content p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .edu-badge {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 2px 10px;
+      background: #fde8e3;
+      color: #b7472a;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Slideshow */
+    .slideshow-section {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .slideshow-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+    }
+
+    #slideshow {
+      width: 100%;
+      max-width: 500px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .dots { margin-top: 16px; }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background: #ddd;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .dot.active { background: #b7472a; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; }
+      .hero-right { flex: unset; width: 100%; max-width: 280px; margin: 0 auto; }
+      .stats-row { justify-content: center; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .stat-num { font-size: 22px; }
+    }
   </style>
 </head>
 <body>
@@ -38,59 +436,202 @@
 </header>
 
 <main class="container">
-  <div class="bio-section">
-    <div class="main-content">
-      <h1 id="hero-name"></h1>
-      <p id="hero-title"></p>
-      <p id="hero-bio"></p>
-      <p>My research focuses on:</p>
-      <ul id="research-focus"></ul>
+
+  <!-- ══ HERO ══ -->
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-label">Industrial & Production Engineering · RUET</div>
+
+      <h1 class="hero-name">
+        Rupok Islam<br>
+        <em>Avi</em>
+      </h1>
+
+      <p class="hero-title">
+        Undergraduate Researcher · Operations Research · Machine Learning · Optimization
+      </p>
+
+      <p class="hero-bio">
+        This is <strong>Rupok Islam Avi</strong> — you can call me <strong>Avi</strong>. I am a
+        final-year undergraduate student of <strong>Industrial &amp; Production Engineering</strong>
+        at the <span class="highlight">Rajshahi University of Engineering &amp; Technology (RUET)</span>,
+        Rajshahi, Bangladesh. My academic focus lies at the intersection of mathematical optimization,
+        machine learning, and industrial systems — building models that solve real-world problems
+        in scheduling, supply chain resilience, and occupational safety.
+      </p>
+
+      <div class="hero-cta">
+        <a href="https://scholar.google.com/citations?user=pbKE0X8AAAAJ&hl=en" target="_blank" class="btn-primary">Google Scholar</a>
+        <a href="publications.html" class="btn-secondary">Publications</a>
+        <a href="mailto:rupokislamavi.ruet@gmail.com" class="btn-secondary">Contact Me</a>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3.87</div>
+          <div class="stat-label">CGPA / 4.00</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Awards</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Top 5%</div>
+          <div class="stat-label">of Class</div>
+        </div>
+      </div>
     </div>
-    <div class="profile-photo">
-      <img src="profile.jpg" alt="Rupok Islam Avi">
-      <div class="contact-info">
-        <h3>Contact</h3>
-        <p id="contact-email"></p>
-        <h3>Address</h3>
-        <p id="contact-address"></p>
+
+    <!-- Profile sidebar -->
+    <div class="hero-right">
+      <div class="profile-img-wrap">
+        <img src="profile.jpg" alt="Rupok Islam Avi">
+      </div>
+      <div class="profile-card">
+        <div class="profile-card-name">Rupok Islam Avi</div>
+        <div class="profile-card-uni">RUET · IPE Department</div>
+        <div class="profile-info-row">
+          <span class="profile-info-icon">✉️</span>
+          <span class="profile-info-text">
+            <a href="mailto:rupokislamavi.ruet@gmail.com">rupokislamavi.ruet@gmail.com</a>
+          </span>
+        </div>
+        <div class="profile-info-row">
+          <span class="profile-info-icon">📍</span>
+          <span class="profile-info-text">Pallabi, Mirpur-12<br>Dhaka-1216, Bangladesh</span>
+        </div>
+        <div class="profile-info-row">
+          <span class="profile-info-icon">🎓</span>
+          <span class="profile-info-text">B.Sc. in Industrial &amp; Production Engineering</span>
+        </div>
+        <div class="profile-info-row">
+          <span class="profile-info-icon">🔬</span>
+          <span class="profile-info-text">Supervised by Khairun Nahar</span>
+        </div>
+        <div class="cgpa-badge">⭐ CGPA 3.87 / 4.00</div>
       </div>
     </div>
   </div>
 
-  <div class="Gallery">
-    <img id="slideshow" src="" alt="Slideshow Image">
+  <!-- ══ RESEARCH INTERESTS ══ -->
+  <div class="about-section">
+    <h2 class="about-section-title">
+      Research Interests <span>Focus Areas</span>
+    </h2>
+    <div class="interests-wrap">
+      <span class="interest-pill">⚙️ Operations Research</span>
+      <span class="interest-pill">🌿 Supply Chain Optimization</span>
+      <span class="interest-pill">🤖 Machine Learning</span>
+      <span class="interest-pill">📦 Inventory Management</span>
+      <span class="interest-pill">🔤 Natural Language Processing</span>
+      <span class="interest-pill">📅 Scheduling Theory</span>
+      <span class="interest-pill">⚠️ Risk Management</span>
+      <span class="interest-pill">🏥 Healthcare Systems</span>
+    </div>
+  </div>
+
+  <!-- ══ EDUCATION ══ -->
+  <div class="about-section">
+    <h2 class="about-section-title">
+      Education <span>Academic Background</span>
+    </h2>
+
+    <div class="edu-item">
+      <div class="edu-year">2020 — 2025</div>
+      <div class="edu-content">
+        <h4>B.Sc. in Industrial &amp; Production Engineering</h4>
+        <p>Rajshahi University of Engineering &amp; Technology (RUET), Rajshahi, Bangladesh<br>
+        Thesis: Multi-Objective University Course Scheduling Using FJSP Formulation</p>
+        <span class="edu-badge">CGPA 3.87 / 4.00 · Top 5%</span>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-year">2017 — 2019</div>
+      <div class="edu-content">
+        <h4>Higher Secondary Certificate (HSC)</h4>
+        <p>Mirpur Cantonment Public School &amp; College, Dhaka, Bangladesh</p>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-year">2015</div>
+      <div class="edu-content">
+        <h4>Junior School Certificate (JSC)</h4>
+        <p>Mirpur Cantonment Public School, Dhaka Board</p>
+        <span class="edu-badge">GPA 5.00 / 5.00 · Talent Pool Scholarship</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TECHNICAL SKILLS ══ -->
+  <div class="about-section">
+    <h2 class="about-section-title">
+      Technical Skills <span>Tools &amp; Methods</span>
+    </h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Operations Research</div>
+        <div class="skill-tags">
+          <span class="skill-tag">LP / MIP / MILP</span>
+          <span class="skill-tag">Stochastic Programming</span>
+          <span class="skill-tag">Game Theory</span>
+          <span class="skill-tag">Scheduling</span>
+          <span class="skill-tag">Gurobi</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Machine Learning</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Regression &amp; Classification</span>
+          <span class="skill-tag">SVM · Random Forest</span>
+          <span class="skill-tag">Neural Networks</span>
+          <span class="skill-tag">NSGA-II</span>
+          <span class="skill-tag">NLP / BERT</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Programming</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python (Advanced)</span>
+          <span class="skill-tag">C / C++</span>
+          <span class="skill-tag">Pandas · NumPy</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Git · Jupyter</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Data &amp; Visualization</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Tableau · PowerBI</span>
+          <span class="skill-tag">Statistical Modeling</span>
+          <span class="skill-tag">Monte Carlo Simulation</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">LaTeX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLIDESHOW ══ -->
+  <div class="slideshow-section">
+    <h3>Beyond Research</h3>
+    <img id="slideshow" src="cox.jpg" alt="Photo">
     <div class="dots" id="dots"></div>
   </div>
 
-  <h2>Technical Skills</h2>
-  <p id="skills-text"></p>
 </main>
 
-<script src="data.js"></script>
 <script>
-  // Fill personal info
-  document.getElementById("hero-name").textContent   = DATA_PERSONAL.name;
-  document.getElementById("hero-title").textContent  = DATA_PERSONAL.title;
-  document.getElementById("hero-bio").innerHTML      = DATA_PERSONAL.bio;
-  document.getElementById("contact-email").textContent  = DATA_PERSONAL.email;
-  document.getElementById("contact-address").innerHTML  = DATA_PERSONAL.address;
-  document.getElementById("skills-text").innerHTML   = DATA_PERSONAL.skills;
-
-  // Research focus list
-  const focusList = document.getElementById("research-focus");
-  DATA_PERSONAL.researchFocus.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    focusList.appendChild(li);
-  });
-
-  // Slideshow
-  const images  = DATA_PERSONAL.slideshowImages;
+  const images = ["cox.jpg", "football.jpg", "sajek.jpg", "meow_lovers.jpg"];
   const slideEl = document.getElementById("slideshow");
   const dotsEl  = document.getElementById("dots");
-  let currentIndex = 0;
+  let current = 0;
 
-  slideEl.src = images[0];
   images.forEach((_, i) => {
     const dot = document.createElement("span");
     dot.className = "dot" + (i === 0 ? " active" : "");
@@ -99,11 +640,12 @@
   });
 
   function showSlide(index) {
-    currentIndex = index;
-    slideEl.src  = images[index];
+    current = index;
+    slideEl.src = images[index];
     document.querySelectorAll(".dot").forEach((d, i) => d.classList.toggle("active", i === index));
   }
-  setInterval(() => showSlide((currentIndex + 1) % images.length), 5000);
+
+  setInterval(() => showSlide((current + 1) % images.length), 4500);
 </script>
 </body>
 </html>
