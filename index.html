@@ -3,414 +3,300 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rupok Islam Avi</title>
+  <title>Rupok Islam Avi | About</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    /* ── Base ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── Hero ── */
-    .hero {
+    /* ── About Layout ── */
+    .about-wrapper {
       display: flex;
-      gap: 48px;
+      gap: 40px;
+      margin-bottom: 48px;
       align-items: flex-start;
-      margin-bottom: 56px;
-      padding-top: 16px;
     }
 
-    .hero-left { flex: 1; }
-
-    .hero-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #b7472a;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    /* LEFT: photo + contact */
+    .about-left {
+      flex: 0 0 220px;
+      text-align: center;
     }
 
-    .hero-label::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: #e0e0e0;
-      max-width: 80px;
-    }
-
-    .hero-name {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(40px, 5vw, 62px);
-      font-weight: 400;
-      line-height: 1.08;
-      color: #1a1a2e;
-      margin-bottom: 20px;
-    }
-
-    .hero-name em {
-      font-style: italic;
-      color: #b7472a;
-    }
-
-    .hero-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: #888;
-      letter-spacing: 0.04em;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-
-    .hero-bio {
-      font-size: 15px;
-      color: #444;
-      line-height: 1.85;
-      margin-bottom: 28px;
-      text-align: justify;
-    }
-
-    .hero-bio strong { color: #1a1a2e; }
-    .hero-bio .highlight {
-      background: linear-gradient(120deg, #fde8e3 0%, #fde8e3 100%);
-      padding: 1px 4px;
-      border-radius: 3px;
-      color: #b7472a;
-      font-weight: 500;
-    }
-
-    /* CTA buttons */
-    .hero-cta {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 36px;
-    }
-
-    .btn-primary {
-      padding: 10px 24px;
-      background: #b7472a;
-      color: #fff;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn-primary:hover { background: #9a3820; transform: translateY(-1px); }
-
-    .btn-secondary {
-      padding: 10px 24px;
-      background: transparent;
-      color: #b7472a;
-      border: 1.5px solid #b7472a;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn-secondary:hover { background: #b7472a; color: #fff; transform: translateY(-1px); }
-
-    /* Stats row */
-    .stats-row {
-      display: flex;
-      gap: 28px;
-      flex-wrap: wrap;
-      padding: 20px 24px;
-      background: #fafafa;
-      border-radius: 10px;
-      border: 1px solid #f0f0f0;
-    }
-
-    .stat { text-align: center; }
-
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: #b7472a;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .stat-label {
-      font-size: 11px;
-      color: #888;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* Profile sidebar */
-    .hero-right {
-      flex: 0 0 240px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .profile-img-wrap {
-      position: relative;
-      margin-bottom: 0;
-    }
-
-    .profile-img-wrap img {
-      width: 100%;
-      height: 280px;
+    .about-left img {
+      width: 200px;
+      height: 200px;
       object-fit: cover;
-      border-radius: 12px 12px 0 0;
-      display: block;
-    }
-
-    .profile-card {
-      background: #1a1a2e;
-      border-radius: 0 0 12px 12px;
-      padding: 20px;
-      color: #fff;
-    }
-
-    .profile-card-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-
-    .profile-card-uni {
-      font-size: 11px;
-      color: #b7472a;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .profile-info-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .profile-info-icon {
-      font-size: 14px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .profile-info-text {
-      font-size: 12px;
-      color: #bbb;
-      line-height: 1.5;
-    }
-
-    .profile-info-text a {
-      color: #e8a090;
-      text-decoration: none;
-    }
-
-    .cgpa-badge {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 6px 14px;
-      background: rgba(183,71,42,0.2);
-      border: 1px solid rgba(183,71,42,0.4);
-      border-radius: 20px;
-      font-size: 12px;
-      color: #e8a090;
-      font-weight: 600;
-    }
-
-    /* ── Section ── */
-    .about-section { margin-bottom: 52px; }
-
-    .about-section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 400;
-      color: #1a1a2e;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .about-section-title span {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #b7472a;
-      font-family: 'DM Sans', sans-serif;
-    }
-
-    /* Research Interests */
-    .interests-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .interest-pill {
-      padding: 8px 18px;
-      border-radius: 24px;
-      font-size: 13px;
-      font-weight: 500;
-      border: 1.5px solid;
-      transition: all 0.2s ease;
-      cursor: default;
-    }
-
-    .interest-pill:nth-child(1) { color: #b7472a; border-color: #b7472a; background: #fff5f3; }
-    .interest-pill:nth-child(2) { color: #1a6b3c; border-color: #1a6b3c; background: #f0faf4; }
-    .interest-pill:nth-child(3) { color: #1a4a8a; border-color: #1a4a8a; background: #f0f5ff; }
-    .interest-pill:nth-child(4) { color: #6b3a1a; border-color: #6b3a1a; background: #fdf5f0; }
-    .interest-pill:nth-child(5) { color: #6b1a6b; border-color: #6b1a6b; background: #fdf0fd; }
-    .interest-pill:nth-child(6) { color: #1a6b6b; border-color: #1a6b6b; background: #f0fdfd; }
-    .interest-pill:nth-child(7) { color: #8a6b1a; border-color: #8a6b1a; background: #fdfaf0; }
-    .interest-pill:nth-child(8) { color: #3a1a6b; border-color: #3a1a6b; background: #f5f0fd; }
-    .interest-pill:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-
-    /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 16px;
-    }
-
-    .skill-group {
-      background: #fafafa;
-      border: 1px solid #f0f0f0;
-      border-radius: 10px;
-      padding: 18px 20px;
-    }
-
-    .skill-group-title {
-      font-size: 11px;
-      font-weight: 700;
-      color: #b7472a;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      border-radius: 8px;
       margin-bottom: 12px;
     }
 
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .skill-tag {
-      padding: 3px 10px;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-      font-size: 12px;
-      color: #555;
-    }
-
-    /* Education */
-    .edu-item {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      padding: 20px 0;
-      border-bottom: 1px solid #f5f5f5;
-    }
-
-    .edu-item:last-child { border-bottom: none; }
-
-    .edu-year {
-      flex: 0 0 80px;
-      font-size: 12px;
-      color: #b7472a;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      padding-top: 2px;
-    }
-
-    .edu-content h4 {
-      font-size: 15px;
-      font-weight: 600;
+    .about-left h3 {
+      font-size: 16px;
       color: #1a1a2e;
       margin-bottom: 4px;
     }
 
-    .edu-content p {
+    .about-left .uni {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .contact-block {
+      text-align: left;
       font-size: 13px;
-      color: #666;
+      color: #555;
+      line-height: 2;
+    }
+
+    .contact-block strong {
+      color: #222;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .contact-block a { color: #b7472a; text-decoration: none; }
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* Social icons row */
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      color: #444;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .social-icons a:hover { background: #b7472a; color: #fff; }
+
+    /* RIGHT: bio */
+    .about-right { flex: 1; }
+
+    .about-right h1 {
+      font-size: 30px;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+    }
+
+    .about-right .subtitle {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 20px;
       line-height: 1.6;
     }
 
-    .edu-badge {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 2px 10px;
-      background: #fde8e3;
-      color: #b7472a;
-      border-radius: 10px;
-      font-size: 11px;
-      font-weight: 600;
+    .about-right p {
+      font-size: 14.5px;
+      color: #333;
+      line-height: 1.85;
+      margin-bottom: 16px;
+      text-align: justify;
     }
 
-    /* Slideshow */
-    .slideshow-section {
-      text-align: center;
-      margin-bottom: 52px;
+    .about-right p a { color: #b7472a; text-decoration: none; }
+    .about-right p a:hover { text-decoration: underline; }
+
+    /* ── Photo Carousel ── */
+    .carousel-section { margin-bottom: 52px; }
+
+    .carousel-track {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: #b7472a #f0f0f0;
     }
 
-    .slideshow-section h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 400;
-      color: #1a1a2e;
-      margin-bottom: 20px;
-    }
+    .carousel-track::-webkit-scrollbar { height: 5px; }
+    .carousel-track::-webkit-scrollbar-thumb { background: #b7472a; border-radius: 3px; }
 
-    #slideshow {
-      width: 100%;
-      max-width: 500px;
-      height: 340px;
+    .carousel-track img {
+      height: 200px;
+      width: auto;
+      border-radius: 8px;
+      flex-shrink: 0;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease;
     }
 
-    .dots { margin-top: 16px; }
+    .carousel-track img:hover { transform: scale(1.03); }
 
-    .dot {
+    /* ── Section heading ── */
+    .section-h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 48px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .section-h2 a {
+      color: #1a1a2e;
+      text-decoration: none;
+    }
+
+    .section-h2 a:hover { color: #b7472a; }
+
+    /* ── News Table ── */
+    .news-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .news-table tr { border-bottom: 1px solid #f0f0f0; }
+    .news-table tr:last-child { border-bottom: none; }
+
+    .news-table td {
+      padding: 10px 8px;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .news-table td:first-child {
+      white-space: nowrap;
+      color: #888;
+      font-size: 13px;
+      width: 110px;
+      font-weight: 500;
+    }
+
+    .news-table td:last-child { color: #333; }
+    .news-table td a { color: #b7472a; text-decoration: none; }
+    .news-table td a:hover { text-decoration: underline; }
+
+    /* ── Selected Publications ── */
+    .pub-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: flex-start;
+    }
+
+    .pub-item:last-child { border-bottom: none; }
+
+    .pub-num {
+      flex: 0 0 28px;
+      font-size: 14px;
+      color: #b7472a;
+      font-weight: 700;
+      padding-top: 2px;
+    }
+
+    .pub-thumb {
+      flex: 0 0 100px;
+    }
+
+    .pub-thumb img {
+      width: 100px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 1px solid #e0e0e0;
+    }
+
+    .pub-content { flex: 1; }
+
+    .pub-venue-badge {
       display: inline-block;
-      width: 8px;
-      height: 8px;
-      margin: 0 5px;
-      border-radius: 50%;
-      background: #ddd;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      padding: 2px 8px;
+      background: #f0f0f0;
+      border-radius: 3px;
+      font-size: 11px;
+      color: #555;
+      font-weight: 600;
+      margin-bottom: 6px;
     }
 
-    .dot.active { background: #b7472a; }
+    .pub-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    .pub-authors {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .pub-authors em { color: #b7472a; font-style: normal; font-weight: 500; }
+
+    .pub-meta {
+      font-size: 12px;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .pub-links { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .pub-link {
+      padding: 3px 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 11px;
+      color: #444;
+      text-decoration: none;
+      background: #fafafa;
+      transition: all 0.2s ease;
+    }
+
+    .pub-link:hover { background: #b7472a; color: #fff; border-color: #b7472a; }
+
+    /* abstract toggle */
+    .pub-abstract {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.7;
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: #f9f9f9;
+      border-left: 3px solid #b7472a;
+      border-radius: 0 4px 4px 0;
+      display: none;
+      text-align: justify;
+    }
+
+    /* ── Footer ── */
+    .about-footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid #eee;
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .about-footer a { color: #b7472a; text-decoration: none; }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .hero { flex-direction: column; }
-      .hero-right { flex: unset; width: 100%; max-width: 280px; margin: 0 auto; }
-      .stats-row { justify-content: center; }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 480px) {
-      .skills-grid { grid-template-columns: 1fr; }
-      .stat-num { font-size: 22px; }
+      .about-wrapper { flex-direction: column; align-items: center; }
+      .about-left { flex: unset; width: 100%; max-width: 260px; }
+      .pub-item { flex-wrap: wrap; }
+      .pub-thumb { flex: 0 0 80px; }
+      .news-table td:first-child { width: 80px; font-size: 12px; }
     }
   </style>
 </head>
@@ -437,215 +323,215 @@
 
 <main class="container">
 
-  <!-- ══ HERO ══ -->
-  <div class="hero">
-    <div class="hero-left">
-      <div class="hero-label">Industrial & Production Engineering · RUET</div>
+  <!-- ══ TOP BIO SECTION ══ -->
+  <div class="about-wrapper">
 
-      <h1 class="hero-name">
-        Rupok Islam<br>
-        <em>Avi</em>
-      </h1>
+    <!-- Left: Photo + Contact -->
+    <div class="about-left">
+      <img src="profile.jpg" alt="Rupok Islam Avi">
+      <h3>Rupok Islam Avi</h3>
+      <div class="uni">IPE Undergraduate Student<br>RUET, Rajshahi, Bangladesh</div>
 
-      <p class="hero-title">
-        Undergraduate Researcher · Operations Research · Machine Learning · Optimization
+      <div class="contact-block">
+        <strong>Location</strong>
+        Pallabi, Mirpur-12<br>Dhaka-1216, Bangladesh
+
+        <strong>Contact</strong>
+        <a href="mailto:rupokislamavi.ruet@gmail.com">rupokislamavi.ruet[at]gmail.com</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://scholar.google.com/citations?user=pbKE0X8AAAAJ&hl=en" target="_blank" title="Google Scholar">🎓</a>
+        <a href="https://github.com/rupokavi" target="_blank" title="GitHub">💻</a>
+        <a href="https://www.researchgate.net" target="_blank" title="ResearchGate">🔬</a>
+        <a href="mailto:rupokislamavi.ruet@gmail.com" title="Email">✉️</a>
+      </div>
+    </div>
+
+    <!-- Right: Bio -->
+    <div class="about-right">
+      <h1>Rupok Islam Avi</h1>
+      <p class="subtitle">
+        IPE Undergraduate Student, RUET | Operations Research | Mathematical Optimization | Machine Learning
       </p>
 
-      <p class="hero-bio">
-        This is <strong>Rupok Islam Avi</strong> — you can call me <strong>Avi</strong>. I am a
-        final-year undergraduate student of <strong>Industrial &amp; Production Engineering</strong>
-        at the <span class="highlight">Rajshahi University of Engineering &amp; Technology (RUET)</span>,
-        Rajshahi, Bangladesh. My academic focus lies at the intersection of mathematical optimization,
-        machine learning, and industrial systems — building models that solve real-world problems
-        in scheduling, supply chain resilience, and occupational safety.
+      <p>
+        This is <em>Rupok Islam Avi</em>; however, you can call me <strong>Avi</strong>.
+        I am a final-year undergraduate student of <strong>Industrial &amp; Production Engineering</strong>
+        at the <a href="https://www.ruet.ac.bd/">Rajshahi University of Engineering &amp; Technology (RUET)</a>,
+        Rajshahi, Bangladesh, maintaining a <strong>CGPA of 3.87/4.00</strong> — placing me in the
+        <strong>top 5% of my class</strong>.
       </p>
 
-      <div class="hero-cta">
-        <a href="https://scholar.google.com/citations?user=pbKE0X8AAAAJ&hl=en" target="_blank" class="btn-primary">Google Scholar</a>
-        <a href="publications.html" class="btn-secondary">Publications</a>
-        <a href="mailto:rupokislamavi.ruet@gmail.com" class="btn-secondary">Contact Me</a>
-      </div>
+      <p>
+        My undergraduate thesis, supervised by <strong>Khairun Nahar</strong>, models the
+        university course scheduling problem as a <strong>Flexible Job Shop Problem (FJSP)</strong> —
+        a well-known NP-hard combinatorial optimization problem — and solves it using
+        <strong>NSGA-II</strong> (metaheuristic) and <strong>Gurobi MIP</strong> (exact solver)
+        for multi-objective Pareto-optimal scheduling. I have also co-authored a manuscript submitted to
+        <em>Discover Artificial Intelligence</em> (Springer Nature) applying
+        <strong>NLP, BERT, FUCOM, and RPN</strong> methods to occupational hazard classification
+        in manufacturing environments.
+      </p>
 
-      <div class="stats-row">
-        <div class="stat">
-          <div class="stat-num">6</div>
-          <div class="stat-label">Publications</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">3.87</div>
-          <div class="stat-label">CGPA / 4.00</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">3+</div>
-          <div class="stat-label">Awards</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">Top 5%</div>
-          <div class="stat-label">of Class</div>
-        </div>
-      </div>
-    </div>
+      <p>
+        My research focuses on the intersection of <strong>Operations Research</strong>,
+        <strong>Machine Learning</strong>, and <strong>Industrial Engineering</strong>,
+        with particular interests in: mathematical optimization (LP, MIP, MILP, stochastic programming),
+        scheduling theory, supply chain resilience, healthcare inventory management, and
+        natural language processing. I actively participate in international supply chain case
+        competitions, having won the <strong>IEOM Supply Chain &amp; Logistics Competition 2024</strong>
+        (1st place), the <strong>ISCEA Prize Global Case Competition 2025</strong>, and the
+        <strong>BIHRM Supply Chain Research Challenge 5.0</strong>.
+      </p>
 
-    <!-- Profile sidebar -->
-    <div class="hero-right">
-      <div class="profile-img-wrap">
-        <img src="profile.jpg" alt="Rupok Islam Avi">
-      </div>
-      <div class="profile-card">
-        <div class="profile-card-name">Rupok Islam Avi</div>
-        <div class="profile-card-uni">RUET · IPE Department</div>
-        <div class="profile-info-row">
-          <span class="profile-info-icon">✉️</span>
-          <span class="profile-info-text">
-            <a href="mailto:rupokislamavi.ruet@gmail.com">rupokislamavi.ruet@gmail.com</a>
-          </span>
-        </div>
-        <div class="profile-info-row">
-          <span class="profile-info-icon">📍</span>
-          <span class="profile-info-text">Pallabi, Mirpur-12<br>Dhaka-1216, Bangladesh</span>
-        </div>
-        <div class="profile-info-row">
-          <span class="profile-info-icon">🎓</span>
-          <span class="profile-info-text">B.Sc. in Industrial &amp; Production Engineering</span>
-        </div>
-        <div class="profile-info-row">
-          <span class="profile-info-icon">🔬</span>
-          <span class="profile-info-text">Supervised by Khairun Nahar</span>
-        </div>
-        <div class="cgpa-badge">⭐ CGPA 3.87 / 4.00</div>
-      </div>
+      <p>
+        I am the <strong>Secretary of Corporate Alliance</strong> at the RUET IPE Club and have
+        completed industrial training at <strong>JTI Bangladesh</strong> focusing on energy efficiency
+        and boiler systems. I have applied to the <strong>Erasmus Mundus EMSSE</strong> program
+        for graduate studies in Europe.
+      </p>
     </div>
   </div>
 
-  <!-- ══ RESEARCH INTERESTS ══ -->
-  <div class="about-section">
-    <h2 class="about-section-title">
-      Research Interests <span>Focus Areas</span>
-    </h2>
-    <div class="interests-wrap">
-      <span class="interest-pill">⚙️ Operations Research</span>
-      <span class="interest-pill">🌿 Supply Chain Optimization</span>
-      <span class="interest-pill">🤖 Machine Learning</span>
-      <span class="interest-pill">📦 Inventory Management</span>
-      <span class="interest-pill">🔤 Natural Language Processing</span>
-      <span class="interest-pill">📅 Scheduling Theory</span>
-      <span class="interest-pill">⚠️ Risk Management</span>
-      <span class="interest-pill">🏥 Healthcare Systems</span>
+  <!-- ══ PHOTO CAROUSEL ══ -->
+  <div class="carousel-section">
+    <div class="carousel-track">
+      <img src="profile.jpg"      alt="Rupok Islam Avi">
+      <img src="cox.jpg"          alt="Cox's Bazar">
+      <img src="sajek.jpg"        alt="Sajek Valley">
+      <img src="meow_lovers.jpg"  alt="Industrial Super League 2025 Champions">
+      <img src="chini_babas.jpg"  alt="Industrial Premier League 2024 Champions">
+      <img src="panamcity.jpg"    alt="Panam City">
+      <img src="mohera.jpg"       alt="Mohera Zamindar Bari">
+      <img src="kuthibari.jpg"    alt="Rabindra Kuthibari">
     </div>
   </div>
 
-  <!-- ══ EDUCATION ══ -->
-  <div class="about-section">
-    <h2 class="about-section-title">
-      Education <span>Academic Background</span>
-    </h2>
+  <!-- ══ NEWS ══ -->
+  <h2 class="section-h2"><a href="#">News</a></h2>
+  <table class="news-table">
+    <tr>
+      <td>May 2026</td>
+      <td>Completed full revision of NLP/FUCOM manuscript and resubmitted to <em>Discover Artificial Intelligence</em> (Springer Nature).</td>
+    </tr>
+    <tr>
+      <td>May 2025</td>
+      <td>Team <strong>RUET-0105-25</strong> officially won the <strong>2025 ISCEA Prize Global Supply Chain Case Competition</strong>, unlocking a 70% scholarship for the CSCA certification. <a href="https://www.iscea.com/" target="_blank">[ISCEA Website]</a></td>
+    </tr>
+    <tr>
+      <td>Oct 2025</td>
+      <td>Team <strong>SynerChain</strong> placed 21st–27th at <strong>BIHRM Supply Chain Research Challenge 5.0</strong>, winning an 80% scholarship for the ACSCP™ certification. Research article published in <em>Supply Chain Insider</em>. <a href="https://zenodo.org/records/17284382" target="_blank">[Paper]</a></td>
+    </tr>
+    <tr>
+      <td>Early 2026</td>
+      <td>Successfully completed thesis pre-defense for <strong>Multi-Objective University Course Scheduling Using FJSP</strong> at RUET IPE department.</td>
+    </tr>
+    <tr>
+      <td>Dec 2024</td>
+      <td>Presented <strong>4 research papers</strong> at the 7th Bangladeshi IEOM Conference and 6th ICMIME Conference, Rajshahi.</td>
+    </tr>
+    <tr>
+      <td>Dec 2024</td>
+      <td>Won <strong>1st place</strong> at the IEOM Supply Chain &amp; Logistics Competition 2024 among university teams across Bangladesh.</td>
+    </tr>
+  </table>
 
-    <div class="edu-item">
-      <div class="edu-year">2020 — 2025</div>
-      <div class="edu-content">
-        <h4>B.Sc. in Industrial &amp; Production Engineering</h4>
-        <p>Rajshahi University of Engineering &amp; Technology (RUET), Rajshahi, Bangladesh<br>
-        Thesis: Multi-Objective University Course Scheduling Using FJSP Formulation</p>
-        <span class="edu-badge">CGPA 3.87 / 4.00 · Top 5%</span>
+  <!-- ══ SELECTED PUBLICATIONS ══ -->
+  <h2 class="section-h2"><a href="publications.html">Selected Publications</a></h2>
+
+  <div id="selected-pubs">
+
+    <div class="pub-item">
+      <div class="pub-num">1.</div>
+      <div class="pub-thumb">
+        <img src="Supplychain_insider.png" alt="Industry 4.0" onerror="this.style.display='none'">
+      </div>
+      <div class="pub-content">
+        <span class="pub-venue-badge">Supply Chain Insider · 2025</span>
+        <div class="pub-title">Industry 4.0-Enabled Sustainable Supply Chain Strategies: Insights from the Emerging Garments Industry Using a Bayesian Best-Worst Method</div>
+        <div class="pub-authors"><em>Mushfiquddin Rafid*</em>, <em>Rupok Islam Avi*</em>, Rejwanul Haque Wasi</div>
+        <div class="pub-meta">Supply Chain Insider Journal, 2025 &nbsp;·&nbsp; * denotes equal contribution</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link abs-toggle">Abs</a>
+          <a href="https://zenodo.org/records/17284382" target="_blank" class="pub-link">Paper</a>
+        </div>
+        <div class="pub-abstract">Industry 4.0 technologies are diffusing quickly in making export oriented garment supply chains, particularly in developing economies such as Bangladesh and India. This research fills the gap in systematically prioritizing the adoption criteria of I4.0 based on three core dimensions — Technological Readiness, Supply Chain, and Sustainability — using the Bayesian Best-Worst Method (BWM).</div>
       </div>
     </div>
 
-    <div class="edu-item">
-      <div class="edu-year">2017 — 2019</div>
-      <div class="edu-content">
-        <h4>Higher Secondary Certificate (HSC)</h4>
-        <p>Mirpur Cantonment Public School &amp; College, Dhaka, Bangladesh</p>
+    <div class="pub-item">
+      <div class="pub-num">2.</div>
+      <div class="pub-thumb">
+        <img src="bigdata.jpg" alt="Big Data AI" onerror="this.style.display='none'">
+      </div>
+      <div class="pub-content">
+        <span class="pub-venue-badge">IEOM Conference · 2024</span>
+        <div class="pub-title">Harnessing Big Data and AI for Supply Chain Resilience in the Garments Industry</div>
+        <div class="pub-authors">Mushfiquddin Rafid, <em>Rupok Islam Avi</em>, Tunazzina Binta Mostafa, Rejwanul Haque Wasi</div>
+        <div class="pub-meta">7th Bangladeshi IEOM Conference, December 2024</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link abs-toggle">Abs</a>
+          <a href="https://ieomsociety.org/proceedings/bangladesh2024/228.pdf" target="_blank" class="pub-link">Paper</a>
+        </div>
+        <div class="pub-abstract">This study introduces strategies to improve supply chain resilience in Bangladesh's garments industry using AI and Big Data tools, comparing technological developments with China as a benchmark. Findings highlight adoption of AI-based quality control, blockchain platforms, and predictive analytics.</div>
       </div>
     </div>
 
-    <div class="edu-item">
-      <div class="edu-year">2015</div>
-      <div class="edu-content">
-        <h4>Junior School Certificate (JSC)</h4>
-        <p>Mirpur Cantonment Public School, Dhaka Board</p>
-        <span class="edu-badge">GPA 5.00 / 5.00 · Talent Pool Scholarship</span>
+    <div class="pub-item">
+      <div class="pub-num">3.</div>
+      <div class="pub-thumb">
+        <img src="optimize.png" alt="EOQ Pharma" onerror="this.style.display='none'">
+      </div>
+      <div class="pub-content">
+        <span class="pub-venue-badge">IEOM Conference · 2024</span>
+        <div class="pub-title">Integrating Demand Forecasting and EOQ for Inventory Management in the Pharmaceutical Sector</div>
+        <div class="pub-authors"><em>Rupok Islam Avi</em>, Md. Ferdaous Al-Farabi, Ifte Kharul Islam Nahid, Md. Limonur Rahman Lingkon, Dr. Md. Sanowar Hossain</div>
+        <div class="pub-meta">7th Bangladeshi IEOM Conference, December 2024</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link abs-toggle">Abs</a>
+          <a href="https://ieomsociety.org/proceedings/bangladesh2024/187.pdf" target="_blank" class="pub-link">Paper</a>
+        </div>
+        <div class="pub-abstract">This study integrates demand forecasting and EOQ modeling for GLYMIN, a vital diabetes drug. Linear regression outperformed exponential smoothing (4.32% MAPE). Monte Carlo simulations assessed stockout probability at 0.0006.</div>
       </div>
     </div>
+
   </div>
 
-  <!-- ══ TECHNICAL SKILLS ══ -->
-  <div class="about-section">
-    <h2 class="about-section-title">
-      Technical Skills <span>Tools &amp; Methods</span>
-    </h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <div class="skill-group-title">Operations Research</div>
-        <div class="skill-tags">
-          <span class="skill-tag">LP / MIP / MILP</span>
-          <span class="skill-tag">Stochastic Programming</span>
-          <span class="skill-tag">Game Theory</span>
-          <span class="skill-tag">Scheduling</span>
-          <span class="skill-tag">Gurobi</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Machine Learning</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Regression &amp; Classification</span>
-          <span class="skill-tag">SVM · Random Forest</span>
-          <span class="skill-tag">Neural Networks</span>
-          <span class="skill-tag">NSGA-II</span>
-          <span class="skill-tag">NLP / BERT</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Programming</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Python (Advanced)</span>
-          <span class="skill-tag">C / C++</span>
-          <span class="skill-tag">Pandas · NumPy</span>
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">Git · Jupyter</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Data &amp; Visualization</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Tableau · PowerBI</span>
-          <span class="skill-tag">Statistical Modeling</span>
-          <span class="skill-tag">Monte Carlo Simulation</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">LaTeX</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <p style="text-align:center; margin-top: 8px;">
+    <a href="publications.html" style="color:#b7472a; font-size:14px; font-weight:600; text-decoration:none;">See all publications →</a>
+  </p>
 
-  <!-- ══ SLIDESHOW ══ -->
-  <div class="slideshow-section">
-    <h3>Beyond Research</h3>
-    <img id="slideshow" src="cox.jpg" alt="Photo">
-    <div class="dots" id="dots"></div>
+  <!-- ══ FOOTER ══ -->
+  <div class="about-footer">
+    <div class="social-icons" style="justify-content:center; margin-bottom:12px;">
+      <a href="mailto:rupokislamavi.ruet@gmail.com" title="Email">✉️</a>
+      <a href="https://scholar.google.com/citations?user=pbKE0X8AAAAJ&hl=en" target="_blank" title="Google Scholar">🎓</a>
+      <a href="https://github.com/rupokavi" target="_blank" title="GitHub">💻</a>
+      <a href="https://www.researchgate.net" target="_blank" title="ResearchGate">🔬</a>
+    </div>
+    Reach me via email at <a href="mailto:rupokislamavi.ruet@gmail.com">rupokislamavi.ruet[at]gmail.com</a><br><br>
+    © Copyright 2026 Rupok Islam Avi. Last updated: May 2026.
   </div>
 
 </main>
 
 <script>
-  const images = ["cox.jpg", "football.jpg", "sajek.jpg", "meow_lovers.jpg"];
-  const slideEl = document.getElementById("slideshow");
-  const dotsEl  = document.getElementById("dots");
-  let current = 0;
-
-  images.forEach((_, i) => {
-    const dot = document.createElement("span");
-    dot.className = "dot" + (i === 0 ? " active" : "");
-    dot.onclick = () => showSlide(i);
-    dotsEl.appendChild(dot);
+  // Abstract toggle
+  document.querySelectorAll(".abs-toggle").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      const abs = this.closest(".pub-content").querySelector(".pub-abstract");
+      if (abs.style.display === "block") {
+        abs.style.display = "none";
+        this.textContent = "Abs";
+      } else {
+        abs.style.display = "block";
+        this.textContent = "Hide";
+      }
+    });
   });
-
-  function showSlide(index) {
-    current = index;
-    slideEl.src = images[index];
-    document.querySelectorAll(".dot").forEach((d, i) => d.classList.toggle("active", i === index));
-  }
-
-  setInterval(() => showSlide((current + 1) % images.length), 4500);
 </script>
+
 </body>
 </html>
