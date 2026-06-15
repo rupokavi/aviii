@@ -141,7 +141,7 @@ const DATA_PROJECTS = [
 
   {
     title:      "Covid-19 Prediction using 8 ML Models",
-    image:      "covid_prediction.jpg",
+    image:      "covid_prediction_illustration.png",
     description:"Benchmarked 8 ML classifiers on a Covid-19 symptom dataset. Gradient Boosting emerged as the clear winner at 97.70% accuracy, followed by Naive Bayes at 74.89%. Includes EDA, label encoding, and binary target conversion via median threshold.",
     tags:       ["Python", "Scikit-learn", "Gradient Boosting", "Healthcare", "Classification"],
     githubLink: "https://github.com/rupokavi/Covid-19-Prediction",
