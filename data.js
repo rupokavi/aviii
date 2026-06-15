@@ -7,7 +7,7 @@
 // ── PERSONAL INFO ────────────────────────────────────────────
 const DATA_PERSONAL = {
   name:        "Rupok Islam Avi",
-  title:       "IPE Undergrad Student, RUET | Research Enthusiast | Operations Research | Optimization | Mathematical Modeling",
+  title:       "IPE Gradute, RUET | Research Enthusiast | Operations Research | Optimization | Machine Learning",
   bio:         "This is <em>Rupok Islam Avi</em>; however, you can call me <strong>Avi</strong>. I am an undergraduate student of <strong>Industrial & Production Engineering</strong> at the <span class='highlight'>Department of IPE, Rajshahi University of Engineering & Technology (RUET), Rajshahi</span>.",
   email:       "rupokislamavi.ruet@gmail.com",
   address:     "Pallabi, Mirpur-12<br>Dhaka-1216, Bangladesh",
