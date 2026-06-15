@@ -125,7 +125,7 @@ const DATA_PROJECTS = [
 
   {
     title:      "Conveyor Belt with Automated Storage and Retrieval System (ASRS)",
-    image:      "asrs_prototype.jpg",
+    image:      "asrs_prototype.png",
     description:"A compact ESP32-based ASRS prototype integrating a conveyor belt with real-time color-based sorting. Uses TCS34725 color sensor, IR sensors, and servo motors to classify and route objects into designated bins. Built with DIY materials at ~10,220 BDT.",
     tags:       ["ESP32", "Arduino", "Embedded Systems", "Automation", "Color Sensing", "Mechatronics"],
     githubLink: "https://github.com/rupokavi/automated_storage-Retrieval_system",
