@@ -118,13 +118,40 @@ const DATA_PUBLICATIONS = [
 // ── PROJECTS ─────────────────────────────────────────────────
 // To ADD a project: copy one block and paste it at the top.
 // githubLink: use "" if no link yet
+// ── PROJECTS ─────────────────────────────────────────────────
+// To ADD a project: copy one block and paste it at the top.
+// githubLink: use "" if no link yet
 const DATA_PROJECTS = [
+
+  {
+    title:      "Conveyor Belt with Automated Storage and Retrieval System (ASRS)",
+    image:      "asrs_prototype.jpg",
+    description:"A compact ESP32-based ASRS prototype integrating a conveyor belt with real-time color-based sorting. Uses TCS34725 color sensor, IR sensors, and servo motors to classify and route objects into designated bins. Built with DIY materials at ~10,220 BDT.",
+    tags:       ["ESP32", "Arduino", "Embedded Systems", "Automation", "Color Sensing", "Mechatronics"],
+    githubLink: "https://github.com/rupokavi/automated_storage-Retrieval_system",
+  },
+
+  {
+    title:      "Stroke Prediction using 5 ML Models",
+    image:      "Accuracy_comparison.png",
+    description:"Comparative study of 5 ML classifiers (Logistic Regression, KNN, Random Forest, Decision Tree, SVM) on the Kaggle Healthcare Stroke Dataset. Logistic Regression and SVM achieved the best accuracy of 94.72%. Best model saved using pickle for reuse.",
+    tags:       ["Python", "Scikit-learn", "Jupyter Notebook", "Healthcare", "Classification"],
+    githubLink: "https://github.com/rupokavi/Stroke-Prediction-using-5-ML-models",
+  },
+
+  {
+    title:      "Covid-19 Prediction using 8 ML Models",
+    image:      "covid_prediction.jpg",
+    description:"Benchmarked 8 ML classifiers on a Covid-19 symptom dataset. Gradient Boosting emerged as the clear winner at 97.70% accuracy, followed by Naive Bayes at 74.89%. Includes EDA, label encoding, and binary target conversion via median threshold.",
+    tags:       ["Python", "Scikit-learn", "Gradient Boosting", "Healthcare", "Classification"],
+    githubLink: "https://github.com/rupokavi/Covid-19-Prediction",
+  },
 
   {
     title:      "Diabetes Prediction Using ML",
     image:      "DiabetesPrediction.jpeg",
     description:"Developed a predictive model analyzing key health indicators (glucose levels, BMI, age, etc.) with high accuracy. Created a local web app for real-time predictions, demonstrating ML's potential in healthcare diagnostics.",
-    tags:       ["Python", "Scikit-learn", "Flask", "Pandas"],
+    tags:       ["Python", "Scikit-learn", "Django", "Pandas"],
     githubLink: "https://github.com/rupokavi/DiabetesPrediction",
   },
 
