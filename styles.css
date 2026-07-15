@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* Prevent mobile browsers from auto-boosting font sizes on narrow columns */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* Base Styles */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -12,6 +18,7 @@ body {
   margin-right: auto;
   line-height: 1.6;
 }
+
 /* Header & Navigation */
 .navbar-container {
   display: flex;
@@ -21,13 +28,11 @@ body {
   padding-bottom: 15px;
   margin-bottom: 30px;
 }
-
 .header-content {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 .header-logo {
   width: 40px;
   height: 40px;
@@ -35,20 +40,16 @@ body {
   object-fit: cover;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .name-header {
-  font-size: 20px; /* Reduced from 36px */
+  font-size: 20px;
   color: #2c3e50;
   margin: 0;
-  font-weight: 600; /* This will affect the bold part */
+  font-weight: 600;
 }
-
-/* Add this new rule */
 .name-header span {
-  font-weight: 400; /* Normal weight for Avi */
-  display: inline-block; /* Better spacing control */
+  font-weight: 400;
+  display: inline-block;
 }
-
 .nav-links {
   list-style: none;
   padding: 0;
@@ -56,18 +57,15 @@ body {
   gap: 25px;
   margin: 0;
 }
-
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.2s ease;
 }
-
 .nav-links a:hover {
   color: #b7472a;
 }
-
 .nav-links a.active {
   color: #b7472a;
   font-weight: 600;
@@ -79,18 +77,15 @@ body {
   gap: 40px;
   margin-top: 30px;
 }
-
 .profile-photo {
   flex: 0 0 260px;
   text-align: center;
 }
-
 .profile-photo img {
   width: 200px;
   border-radius: 8px;
   margin-bottom: 15px;
 }
-
 .contact-info {
   background: #f7f7f7;
   padding: 20px;
@@ -103,16 +98,13 @@ body {
   padding: 2px 4px;
   border-radius: 4px;
 }
-
 h1, h2, h3 {
   color: #2c3e50;
 }
-
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
 }
-
 h2 {
   font-size: 24px;
   margin: 40px 0 20px;
@@ -123,7 +115,6 @@ h2 {
   text-align: center;
   margin-top: 50px;
 }
-
 #slideshow {
   width: 450px;
   height: 350px;
@@ -131,11 +122,9 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 .dots {
   margin-top: 15px;
 }
-
 .dot {
   display: inline-block;
   width: 14px;
@@ -146,7 +135,6 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .dot.active {
   background-color: #555;
 }
@@ -156,43 +144,42 @@ h2 {
   body {
     padding: 25px;
   }
-
   .navbar-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
   }
-
   .header-content {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
   }
-
+  .name-header {
+    font-size: 20px;
+  }
   .header-logo {
     width: 50px;
     height: 50px;
   }
-
   .bio-section {
     flex-direction: column;
     gap: 30px;
   }
-
   .profile-photo {
     flex: none;
     order: -1;
     margin-bottom: 30px;
   }
-
   #slideshow {
     width: 100%;
     height: 300px;
   }
-
   .nav-links {
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+    gap: 12px 18px;
+    font-size: 14px;
   }
 }
 
@@ -200,47 +187,41 @@ h2 {
   body {
     padding: 15px;
   }
-
   .name-header {
-    font-size: 28px;
+    font-size: 18px; /* was 28px — this was the bug making the name huge on phones */
   }
-
   .header-logo {
     width: 40px;
     height: 40px;
   }
-
   .profile-photo img {
     width: 160px;
   }
-
   #slideshow {
     height: 200px;
   }
-
   .contact-info {
     padding: 15px;
     font-size: 0.9rem;
   }
-
   .nav-links {
-    gap: 10px;
-    font-size: 14px;
+    gap: 8px 12px;
+    font-size: 12px;
+    justify-content: center;
   }
 }
-/* Add to styles.css */
+
+/* Hobby Gallery */
 .hobby-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 20px;
 }
-
 .hobby-gallery img {
   width: 100%;
   border-radius: 8px;
 }
-
 .hobby-caption {
   text-align: center;
   font-style: italic;
