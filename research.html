@@ -297,40 +297,40 @@
   <div class="section-heading">Ongoing Research</div>
 
   <div class="research-card">
-    <span class="badge badge-ongoing">● Ongoing — Thesis</span>
-    <h3>Multi-Objective University Course Scheduling Using Flexible Job Shop Problem (FJSP) Formulation</h3>
+    <span class="badge badge-review">● Under Review — Journal Manuscript</span>
+    <h3>Criticality-Guided Memetic NSGA-II for University Course Timetabling: A Multi-Objective Flexible Job Shop Scheduling Approach</h3>
     <div class="meta">
-      Undergraduate Thesis · Department of IPE, RUET · Supervisor: Khairun Nahar
+      Submitted to <em>Computers and Operations Research</em> (Elsevier) · August 2026 · Extension of Undergraduate Thesis
     </div>
     <p>
-      This thesis models the university course scheduling problem for the IPE department at RUET as a
+      This work extends the undergraduate thesis modeling the university course scheduling problem as a
       <strong>Flexible Job Shop Problem (FJSP)</strong> — a well-known NP-hard combinatorial optimization problem.
       The scheduling problem involves assigning courses to faculty members, rooms, and time slots while
       satisfying hard constraints (no conflicts, room capacity, faculty availability) and optimizing
       multiple soft objectives simultaneously.
     </p>
     <p>
-      Two solution approaches are implemented and benchmarked: (1) <strong>NSGA-II</strong> (Non-dominated Sorting
-      Genetic Algorithm II) — a population-based metaheuristic for generating Pareto-optimal solutions,
-      and (2) <strong>Gurobi MIP</strong> — an exact solver providing provably optimal benchmarks for small-scale
-      instances. The work includes scalability studies, idle gap constraint modeling, and a
-      FastAPI + Chart.js web application for real-time schedule generation with Excel output.
+      The proposed <strong>Criticality-Guided Memetic NSGA-II (CGM-NSGA-II)</strong> extends standard NSGA-II
+      with criticality-guided population initialization and mutation, plus a memetic local-search repair step.
+      Benchmarked against Plain NSGA-II, MOEA/D, MOPSO, and SPEA2 across ten instances, it achieves the best
+      average Inverted Generational Distance on all instances and reduces the best achieved makespan by
+      10.9%–44.6% relative to the Plain NSGA-II baseline.
     </p>
     <div>
       <span class="tag">NSGA-II</span>
-      <span class="tag">Gurobi MIP</span>
+      <span class="tag">Memetic Algorithm</span>
+      <span class="tag">Criticality-Guided Search</span>
       <span class="tag">Python</span>
       <span class="tag">Scheduling Theory</span>
       <span class="tag">Multi-objective Optimization</span>
-      <span class="tag">FastAPI</span>
     </div>
   </div>
 
   <div class="research-card">
-    <span class="badge badge-review">● Under Review — Journal Manuscript</span>
+    <span class="badge badge-completed">● Published — Journal Manuscript</span>
     <h3>NLP-Based Occupational Hazard Classification in Manufacturing Using Sentence Transformers, BERT, FUCOM, and RPN</h3>
     <div class="meta">
-      Submitted to <em>Discover Artificial Intelligence</em> (Springer Nature) · May 2026
+      Published in <em>Discover Artificial Intelligence</em> (Springer Nature) · August 2026
     </div>
     <p>
       This manuscript applies <strong>Natural Language Processing (NLP)</strong> techniques to classify
@@ -404,6 +404,18 @@
   <div class="timeline">
 
     <div class="timeline-item">
+      <div class="timeline-date">August 2026</div>
+      <div class="timeline-title">Submitted CGM-NSGA-II Manuscript to Computers and Operations Research (Elsevier)</div>
+      <div class="timeline-desc">Extended undergraduate thesis into a full journal manuscript proposing Criticality-Guided Memetic NSGA-II for university course timetabling, benchmarked against MOEA/D, MOPSO, and SPEA2.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">August 2026</div>
+      <div class="timeline-title">NLP/FUCOM Manuscript Published in Discover Artificial Intelligence (Springer Nature)</div>
+      <div class="timeline-desc">Manuscript accepted and published online following the completed revision cycle.</div>
+    </div>
+
+    <div class="timeline-item">
       <div class="timeline-date">May 2026</div>
       <div class="timeline-title">NLP/FUCOM Manuscript — Revision Submitted to Discover Artificial Intelligence (Springer Nature)</div>
       <div class="timeline-desc">Completed full revision addressing reviewer comments, fixed reference list, and resubmitted to Springer Nature journal.</div>
@@ -449,7 +461,7 @@
     <div class="collab-card">
       <div class="collab-avatar">KN</div>
       <div class="collab-name">Khairun Nahar</div>
-      <div class="collab-role">Thesis Supervisor<br>Department of IPE, RUET</div>
+      <div class="collab-role">Thesis Supervisor · Co-author — CGM-NSGA-II Paper<br>Department of IPE, RUET</div>
       <span class="collab-type">Supervisor</span>
     </div>
 
@@ -463,7 +475,7 @@
     <div class="collab-card">
       <div class="collab-avatar">FA</div>
       <div class="collab-name">Md. Ferdaous Al-Farabi</div>
-      <div class="collab-role">Co-author — Thesis & NLP Manuscript<br>RUET IPE</div>
+      <div class="collab-role">Co-author — CGM-NSGA-II & NLP Manuscripts<br>RUET IPE</div>
       <span class="collab-type">Co-author</span>
     </div>
 
