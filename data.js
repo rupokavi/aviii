@@ -24,6 +24,16 @@ const DATA_PERSONAL = {
 // Fields: title, authors (array), venue, year, paperLink (or "" if none), image, abstract
 const DATA_PUBLICATIONS = [
   {
+  title:    "Criticality-Guided Memetic NSGA-II for University Course Timetabling: A Multi-Objective Flexible Job Shop Scheduling Approach",
+  authors:  ["Rupok Islam Avi", "Md. Ferdaous Al-Farabi", "Khairun Naha"],
+  venue:    "Under Review in Computers and Operations Research (Elsevier)",
+  year:     2026,
+  paperLink:"",
+  image:    "timetabling.png",
+  abstract: "University course timetabling remains a computationally challenging problem when formulated with realistic, competing objectives such as minimizing the makespan, balancing student workload, and maximizing classroom utilization. This study models the University Course Timetabling Problem as a multi-objective Flexible Job Shop Scheduling Problem (UCTP-FJSP) and proposes a Criticality-Guided Memetic NSGA-II (CGM-NSGA-II) to solve it. The proposed algorithm extends the standard NSGA-II with three interdependent components: a criticality-guided population initialization and mutation scheme that biases the search toward operations on the schedule's critical path, and a memetic local-search repair step that actively exploits this guidance. A dedicated benchmark suite of ten instances (UCTP-01 to UCTP-10) of increasing size was developed, and the proposed algorithm was compared against a Plain NSGA-II baseline and three established multi-objective metaheuristics (MOEA/D, MOPSO, and SPEA2) over ten independent runs per instance. A Taguchi-based sensitivity analysis was conducted to justify the algorithm's parameter settings prior to the main experiments. Results show that CGM-NSGA-II achieves the best average Inverted Generational Distance on all ten instances and the best average Hypervolume on nine of the ten instances among the five algorithms compared, and reduces the best achieved makespan by 10.9%–44.6% relative to the Plain NSGA-II baseline. A progressive ablation study with paired Wilcoxon signed-rank testing further shows that the criticality-guided components act synergistically rather than additively: neither guided initialization nor guided mutation alone yields a statistically significant improvement, while their combination with the memetic local-search repair does so consistently across all instances. The findings demonstrate that incorporating scheduling-specific criticality information and local search into an evolutionary framework can substantially improve the quality, convergence, and robustness of multiobjective university timetabling solutions.",
+},
+
+  {
   title:    "Performance Optimization of AISI 304 Stainless Steel Turning through Hybrid XGBoost–NSGA-II under Dry and MQL Conditions",
   authors:  ["Md Limonur Rahman Lingkon", "Emonur Rahman Fahim", "Rupok Islam Avi"],
   venue:    "Under Review in Results in Materials",
