@@ -25,7 +25,7 @@ const DATA_PERSONAL = {
 const DATA_PUBLICATIONS = [
   {
   title:    "Criticality-Guided Memetic NSGA-II for University Course Timetabling: A Multi-Objective Flexible Job Shop Scheduling Approach",
-  authors:  ["Rupok Islam Avi", "Md. Ferdaous Al-Farabi", "Khairun Naha"],
+  authors:  ["Rupok Islam Avi", "Md. Ferdaous Al-Farabi", "Khairun Nahar"],
   venue:    "Under Review in Computers and Operations Research (Elsevier)",
   year:     2026,
   paperLink:"",
